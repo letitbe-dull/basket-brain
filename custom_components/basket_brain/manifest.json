@@ -1,0 +1,14 @@
+{
+  "domain": "basket_brain",
+  "name": "Basket Brain",
+  "version": "1.0.0",
+  "documentation": "https://github.com/letitbe-dull/basket-brain",
+  "issue_tracker": "https://github.com/letitbe-dull/basket-brain/issues",
+  "codeowners": ["@letitbe-dull"],
+  "iot_class": "cloud_polling",
+  "config_flow": true,
+  "integration_type": "service",
+  "dependencies": ["frontend", "http"],
+  "after_dependencies": ["hassio"],
+  "requirements": ["httpx>=0.27", "rapidfuzz>=3.0", "model2vec>=0.6"]
+}

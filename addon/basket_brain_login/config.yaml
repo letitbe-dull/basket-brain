@@ -1,0 +1,26 @@
+name: "Basket Brain Login"
+version: "1.0.0"
+slug: "basket_brain_login"
+# Prebuilt per-arch images pushed by .github/workflows/build-addon.yml. The
+# Supervisor fills in {arch} and pulls the tag matching `version` above.
+image: "ghcr.io/letitbe-dull/{arch}-basket-brain-login"
+description: >-
+  Stealth browser login service for Woolworths and Foodstuffs NZ.
+  Keeps both supermarkets authenticated automatically via camoufox.
+arch:
+  - amd64
+  - aarch64
+startup: services
+boot: auto
+init: false
+ports:
+  8099/tcp: null
+ports_description:
+  8099/tcp: "Login HTTP API"
+watchdog: "http://[HOST]:[PORT:8099]/health"
+# Shared secret. The integration generates one on setup and writes it here, so
+# only it can drive /login — other add-ons share this network but not the token.
+options:
+  api_token: ""
+schema:
+  api_token: "str?"

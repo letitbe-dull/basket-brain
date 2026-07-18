@@ -1,0 +1,8 @@
+homeassistant
+pytest
+pytest-asyncio
+pytest-homeassistant-custom-component
+ruff
+respx
+rapidfuzz
+model2vec

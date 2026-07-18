@@ -1,0 +1,5 @@
+# The add-on runs on Linux — CRLF in a shell script breaks the container.
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf

@@ -1,0 +1,401 @@
+[
+ {
+  "id": "65defcf2-bc15-490e-a84f-1f13b769cd22",
+  "name": "PAK'nSAVE Albany",
+  "address": "Don McKinnon Drive, Albany, Auckland, 0632",
+  "lat": -36.729975,
+  "lon": 174.706725
+ },
+ {
+  "id": "6c73764e-b8e6-4e55-ad37-f6a9d207da1f",
+  "name": "PAK'nSAVE Alderman Dr Hen",
+  "address": "8-18 Alderman Drive, Henderson, Auckland, 0612",
+  "lat": -36.87743,
+  "lon": 174.63292
+ },
+ {
+  "id": "c3f9e1a3-fc34-452d-af2e-95349e666ba4",
+  "name": "PAK'nSAVE Blenheim",
+  "address": "1 Westwood Avenue, Springlands, Blenheim, 7271",
+  "lat": -41.5087,
+  "lon": 173.9234
+ },
+ {
+  "id": "60561e46-ece7-43a7-b142-9b14812586e4",
+  "name": "PAK'nSAVE Botany",
+  "address": "501 Ti Rakau Drive, Northpark, Auckland, 2013",
+  "lat": -36.930652,
+  "lon": 174.913004
+ },
+ {
+  "id": "714431ab-6e39-4df6-ac77-cfc5c1e25bc8",
+  "name": "PAK'nSAVE Cameron Road",
+  "address": "476 Cameron Road, Tauranga, 3110",
+  "lat": -37.696716,
+  "lon": 176.161533
+ },
+ {
+  "id": "d6d39eea-889d-4e20-923c-55cab225cf7f",
+  "name": "PAK'nSAVE Clarence St",
+  "address": "85 Clarence Street, Hamilton Lake, Hamilton, 3204",
+  "lat": -37.795653,
+  "lon": 175.282839
+ },
+ {
+  "id": "3e82142c-78dc-46f3-82ec-28e65fcf84c9",
+  "name": "PAK'nSAVE Clendon",
+  "address": "16 Robert Ross Place, Clendon Park, Auckland, 2103",
+  "lat": -37.03242,
+  "lon": 174.867278
+ },
+ {
+  "id": "90082979-fb9f-4305-9c72-83274fc438cc",
+  "name": "PAK'nSAVE Dunedin",
+  "address": "86 Hillside Road, South Dunedin, Dunedin, 9012",
+  "lat": -45.8927,
+  "lon": 170.4992
+ },
+ {
+  "id": "3404c253-577f-45ca-b301-c98312e46efb",
+  "name": "PAK'nSAVE Glen Innes",
+  "address": "182 Apirana Avenue, Glen Innes, Auckland, 1072",
+  "lat": -36.875918,
+  "lon": 174.855148
+ },
+ {
+  "id": "b39562a4-2b72-43fe-b9ba-eda1d651ad0b",
+  "name": "PAK'nSAVE Hastings",
+  "address": "602 Heretaunga Street West, West End Shopping Centre, Hastings, 4120",
+  "lat": -39.636804,
+  "lon": 176.836635
+ },
+ {
+  "id": "15e6f441-5c1c-4d25-b4ec-1adf918c49c7",
+  "name": "PAK'nSAVE Hawera",
+  "address": "54 Princes Street, Hawera, 4610",
+  "lat": -39.590947,
+  "lon": 174.283801
+ },
+ {
+  "id": "2a1b331a-fc4a-496a-b072-e97cc8f70cae",
+  "name": "PAK'nSAVE Highland Park",
+  "address": "503 - 505 Pakuranga Road, Highland Park, 2010",
+  "lat": -36.8988953,
+  "lon": 174.9047405
+ },
+ {
+  "id": "be4c4780-218e-425a-a90f-63e21773572b",
+  "name": "PAK'nSAVE Hornby",
+  "address": "418 Main South Road, Hornby, Christchurch, 8042",
+  "lat": -43.543,
+  "lon": 172.5232
+ },
+ {
+  "id": "d8032da3-c1b9-456e-b626-41ce21f8c67b",
+  "name": "PAK'nSAVE Invercargill",
+  "address": "95 Tay Street, Invercargill, 9810",
+  "lat": -46.4143,
+  "lon": 168.353
+ },
+ {
+  "id": "3c5e3145-0767-4066-9349-6c0a1313acc5",
+  "name": "PAK'nSAVE Kaitaia",
+  "address": "111 North Road, Kaitaia, 0410",
+  "lat": -35.09945,
+  "lon": 173.258322
+ },
+ {
+  "id": "c180a72d-5dbe-4403-b7c7-91655e505492",
+  "name": "PAK'nSAVE Kapiti",
+  "address": "76 Rimu Road, Paraparaumu, 5032",
+  "lat": -40.9180863,
+  "lon": 175.0017611
+ },
+ {
+  "id": "21ecaaed-0749-4492-985e-4bb7ba43d59c",
+  "name": "PAK'nSAVE Kilbirnie",
+  "address": "76 Rongotai Road, Kilbirnie, Wellington, 6003",
+  "lat": -41.319324,
+  "lon": 174.79672
+ },
+ {
+  "id": "92086ded-a55d-4241-a364-7d7ea91531b4",
+  "name": "PAK'nSAVE Lincoln Road",
+  "address": "202 Lincoln Road, Henderson, Auckland, 0610",
+  "lat": -36.857794,
+  "lon": 174.627968
+ },
+ {
+  "id": "b83029b6-5dd5-449e-8056-26f3943a4e18",
+  "name": "PAK'nSAVE Lower Hutt",
+  "address": "20 Brunswick Street, Hutt Central, Lower Hutt, 5010",
+  "lat": -41.205578,
+  "lon": 174.913149
+ },
+ {
+  "id": "94ef1985-cab1-4b39-a2f3-230120f03c16",
+  "name": "PAK'nSAVE Mangere",
+  "address": "44 Orly Avenue, Mangere, Auckland, 2022",
+  "lat": -36.968516,
+  "lon": 174.796863
+ },
+ {
+  "id": "9cd8eb60-3222-4efc-bd7c-50e03e6a81a4",
+  "name": "PAK'nSAVE Manukau",
+  "address": "6 Cavendish Drive, Manukau City, Auckland, 2104",
+  "lat": -36.987929,
+  "lon": 174.880604
+ },
+ {
+  "id": "d1cd1fdd-8767-46a6-a8d3-c3e0632c2dc8",
+  "name": "PAK'nSAVE Masterton",
+  "address": "424 Queen Street, Kuripuni, Masterton, 5810",
+  "lat": -40.957214,
+  "lon": 175.649687
+ },
+ {
+  "id": "076e8177-943b-41fc-a885-ba3d28297acf",
+  "name": "PAK'nSAVE Mill Street",
+  "address": "17 Mill Street, Whitiora, Hamilton, 3200",
+  "lat": -37.7799,
+  "lon": 175.27281
+ },
+ {
+  "id": "61dd754e-8525-4b9e-9e08-173389eea8a8",
+  "name": "PAK'nSAVE Moorhouse",
+  "address": "297 Moorhouse Avenue, Sydenham, Christchurch, 8011",
+  "lat": -43.5392,
+  "lon": 172.6383
+ },
+ {
+  "id": "b2e98a14-c8ca-401e-99ed-edf74570c6f6",
+  "name": "PAK'nSAVE Mt Albert",
+  "address": "1167-1177 New North Road, Auckland, 1025",
+  "lat": -36.89305,
+  "lon": 174.70624
+ },
+ {
+  "id": "49037947-e450-49bf-ba1f-a94551c79a72",
+  "name": "PAK'nSAVE Napier City",
+  "address": "25 Munroe Street, Napier South, Napier South NAPIER, 4110",
+  "lat": -39.494788,
+  "lon": 176.913562
+ },
+ {
+  "id": "53989945-1a28-481d-a61c-d6f75f760ada",
+  "name": "PAK'nSAVE New Plymouth",
+  "address": "53 Leach Street, New Plymouth, 4310",
+  "lat": -39.05712,
+  "lon": 174.08127
+ },
+ {
+  "id": "5f167936-79ae-4f6a-b9d2-74afe1bb096b",
+  "name": "PAK'nSAVE Ormiston",
+  "address": "1 Bellingham Road, Flat Bush, Auckland, 2019",
+  "lat": -36.965078,
+  "lon": 174.914819
+ },
+ {
+  "id": "48dd98cc-a757-4102-b15d-ea82b4b10571",
+  "name": "PAK'nSAVE Palmerston N",
+  "address": "327 Ferguson Street, Palmerston North, 4410",
+  "lat": -40.359198,
+  "lon": 175.611537
+ },
+ {
+  "id": "a7d09522-bee2-41e4-8fe0-0b82b7f342f5",
+  "name": "PAK'nSAVE Papakura",
+  "address": "331-345 Great South Road, Takanini, Auckland, 2110",
+  "lat": -37.053393,
+  "lon": 174.93096
+ },
+ {
+  "id": "3bfe040b-f0c9-45e0-949b-b9ad5a591d55",
+  "name": "PAK'nSAVE Papamoa",
+  "address": "42 Domain Road, Papamoa Beach, Papamoa, 3118",
+  "lat": -37.70191,
+  "lon": 176.283687
+ },
+ {
+  "id": "8cd700ae-d96f-4761-bd7a-805d6b93536d",
+  "name": "PAK'nSAVE Papanui",
+  "address": "171 Main North Road, Redwood, Christchurch, 8051",
+  "lat": -43.48557,
+  "lon": 172.61472
+ },
+ {
+  "id": "98ec3885-ac93-4fcb-807b-59c9055c52c4",
+  "name": "PAK'nSAVE Petone",
+  "address": "114-124 Jackson Street, Petone, Wellington, 5012",
+  "lat": -41.224456,
+  "lon": 174.872537
+ },
+ {
+  "id": "af385423-d0f1-41f0-9482-ffd10b745143",
+  "name": "PAK'nSAVE Porirua",
+  "address": "12 Parumoana Street, Porirua City Centre, Porirua, 5022",
+  "lat": -41.131559,
+  "lon": 174.841818
+ },
+ {
+  "id": "c2204dae-579e-4b6b-9d42-2e13ceaa6031",
+  "name": "PAK'nSAVE Pukekohe",
+  "address": "99 Queen Street, Pukekohe, 2120",
+  "lat": -37.205157,
+  "lon": 174.899612
+ },
+ {
+  "id": "2ed73be8-936d-4f35-9398-75a707f40a7b",
+  "name": "PAK'nSAVE Queenstown",
+  "address": "302 Hawthorne Drive, Frankton, Queenstown, 9300",
+  "lat": -45.0108,
+  "lon": 168.7492
+ },
+ {
+  "id": "715f0e22-95e0-45ce-af3a-07057209976e",
+  "name": "PAK'nSAVE Rangiora",
+  "address": "2 Southbrook Road, Waimakariri, Rangiora, 7400",
+  "lat": -43.3248,
+  "lon": 172.5999
+ },
+ {
+  "id": "4a279605-eaa8-470d-bcd4-0a9e3c9ab43b",
+  "name": "PAK'nSAVE Riccarton",
+  "address": "129 Riccarton Road, Riccarton, Christchurch, 8041",
+  "lat": -43.5312,
+  "lon": 172.5963
+ },
+ {
+  "id": "5cf0392f-c187-4fc4-a463-eb269d2e8f45",
+  "name": "PAK'nSAVE Richmond",
+  "address": "Croucher and Talbot Streeet, Richmond, Nelson, 7020",
+  "lat": -41.3386,
+  "lon": 173.1866
+ },
+ {
+  "id": "bdc5ef4a-c6a7-4f8a-b8cb-28109e6d61c3",
+  "name": "PAK'nSAVE Rolleston",
+  "address": "157 Levi Road, Rolleston, 7614",
+  "lat": -43.59731231,
+  "lon": 172.39645748
+ },
+ {
+  "id": "7d48a781-4f68-4c91-a908-8659e1b22f95",
+  "name": "PAK'nSAVE Rotorua",
+  "address": "Cnr Fenton and Amohau Streets, Rotorua, 3010",
+  "lat": -38.140495,
+  "lon": 176.25459
+ },
+ {
+  "id": "e1925ea7-01bc-4358-ae7c-c6502da5ab12",
+  "name": "PAK'nSAVE Royal Oak",
+  "address": "691 Manukau Road, Royal Oak, Auckland, 1023",
+  "lat": -36.91014,
+  "lon": 174.77342
+ },
+ {
+  "id": "64eab5b1-8d79-45f4-94f1-02b8cf8b6202",
+  "name": "PAK'nSAVE Silverdale",
+  "address": "20 Hibiscus Coast Highway, Silverdale, Auckland, 0932",
+  "lat": -36.620413,
+  "lon": 174.672975
+ },
+ {
+  "id": "c0f80e87-16be-4488-9553-da437e8c6c2a",
+  "name": "PAK'nSAVE Sylvia Park",
+  "address": "286 Mt Wellington Highway, Mt Wellington, Auckland, 1060",
+  "lat": -36.913347,
+  "lon": 174.84009
+ },
+ {
+  "id": "6cda96e1-7d29-44a6-956b-3fcfdecc8184",
+  "name": "PAK'nSAVE Tamatea",
+  "address": "Leicester Avenue, Tamatea, Napier, 4112",
+  "lat": -39.509905,
+  "lon": 176.869414
+ },
+ {
+  "id": "b92cc33f-b5a8-4b57-9b82-412946800020",
+  "name": "PAK'nSAVE Taupo",
+  "address": "105-131 Ruapehu Street, Taupo, 3330",
+  "lat": -38.685532,
+  "lon": 176.073247
+ },
+ {
+  "id": "1c388d5e-29ac-4956-b476-cb3431353d2e",
+  "name": "PAK'nSAVE Tauriko",
+  "address": "2 Taurikura Drive, Tauriko, Tauranga, 3110",
+  "lat": -37.738653,
+  "lon": 176.103745
+ },
+ {
+  "id": "3bb30799-82ce-4648-8c02-5113228963ed",
+  "name": "PAK'nSAVE Te Awamutu",
+  "address": "670 Cambridge Road, Te Awamutu, 3800",
+  "lat": -38.008101,
+  "lon": 175.340102
+ },
+ {
+  "id": "6e6809dd-01bc-45c9-aab1-f01ccd8338b0",
+  "name": "PAK'nSAVE Thames",
+  "address": "100 Mary Street, Thames, 3500",
+  "lat": -37.138597,
+  "lon": 175.538994
+ },
+ {
+  "id": "b29a98bd-749c-489c-9eef-6aa38e66a29b",
+  "name": "PAK'nSAVE Timaru",
+  "address": "Evans Street, Waimataitai, Timaru, 7910",
+  "lat": -44.383,
+  "lon": 171.2366
+ },
+ {
+  "id": "4fcc1c8e-cc5e-4675-ba25-5e56b579cf69",
+  "name": "PAK'nSAVE Upper Hutt",
+  "address": "Gibbons Street, Upper Hutt, 5018",
+  "lat": -41.123787,
+  "lon": 175.066601
+ },
+ {
+  "id": "dbca5e00-f7f9-43ae-91de-031ad16f8a92",
+  "name": "PAK'nSAVE Wainoni",
+  "address": "174 Wainoni Road, Avondale, Christchurch, 8061",
+  "lat": -43.5125,
+  "lon": 172.6933
+ },
+ {
+  "id": "8f0d70be-5cb7-464b-99cb-8b0130671895",
+  "name": "PAK'nSAVE Warkworth",
+  "address": "12 Hudson Road, Warkworth, 0910",
+  "lat": -36.392108,
+  "lon": 174.649519
+ },
+ {
+  "id": "33d8d6fc-861a-45ff-9937-5ccdb55eaede",
+  "name": "PAK'nSAVE Westgate",
+  "address": "17-19 Fred Taylor Drive, Massey, Auckland, 0814",
+  "lat": -36.820257,
+  "lon": 174.608696
+ },
+ {
+  "id": "50b1216b-d066-4457-b88b-9bccf97bf6d3",
+  "name": "PAK'nSAVE Whakatane",
+  "address": "45 King Street, Whakatane, 3120",
+  "lat": -37.961198,
+  "lon": 176.98257
+ },
+ {
+  "id": "01a114de-149c-4f5f-80a1-90cc63f69c6e",
+  "name": "PAK'nSAVE Whanganui",
+  "address": "167 Glasgow Street, Whanganui, 4500",
+  "lat": -39.92638,
+  "lon": 175.038901
+ },
+ {
+  "id": "529d66cc-60e3-432e-b8d1-efc9f2ec4919",
+  "name": "PAK'nSAVE Whangarei",
+  "address": "104 Walton Street, Whangarei, 0110",
+  "lat": -35.725958,
+  "lon": 174.32475
+ }
+]

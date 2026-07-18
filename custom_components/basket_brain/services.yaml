@@ -1,0 +1,138 @@
+approve_resolution:
+  name: Approve resolution
+  description: >-
+    Approve a low-confidence item resolution, promoting it to high confidence
+    in the product map and learning the phrase so it matches directly next time.
+  fields:
+    phrase:
+      name: Phrase
+      description: The shopping-list phrase whose resolution to approve.
+      required: true
+      example: "bread"
+      selector:
+        text:
+    chain:
+      name: Chain
+      description: The chain whose resolution for this phrase to approve.
+      required: true
+      selector:
+        select:
+          options:
+            - woolworths
+            - paknsave
+            - newworld
+
+pin_alias:
+  name: Pin alias
+  description: Pin a shopping-list phrase to a specific product on one chain.
+  fields:
+    phrase:
+      name: Phrase
+      description: The shopping-list phrase to pin (e.g. "milk").
+      required: true
+      example: "milk"
+      selector:
+        text:
+    chain:
+      name: Chain
+      description: Which supermarket chain the product ID belongs to.
+      required: true
+      selector:
+        select:
+          options:
+            - woolworths
+            - paknsave
+            - newworld
+    product_id:
+      name: Product ID
+      description: The chain's product ID to pin the phrase to.
+      required: true
+      example: "123456"
+      selector:
+        text:
+
+set_quantity:
+  name: Set item quantity
+  description: >-
+    Set how many of a shopping-list item to buy (default 1). Applies to
+    basket totals and the built cart; the todo list itself is untouched.
+  fields:
+    phrase:
+      name: Phrase
+      description: The shopping-list item to set the quantity for.
+      required: true
+      example: "1L milk"
+      selector:
+        text:
+    quantity:
+      name: Quantity
+      description: How many to buy (1–99).
+      required: true
+      example: 2
+      selector:
+        number:
+          min: 1
+          max: 99
+          mode: box
+
+build_cheapest_cart:
+  name: Build cheapest cart
+  description: >-
+    Pick the cheapest chain for the current shopping list and send an
+    approval notification. Never places an order.
+
+build_cart:
+  name: Build cart for a chain
+  description: >-
+    Stage a cart on a specific chain (useful for testing each supermarket
+    individually) and send an approval notification. Never places an order.
+  fields:
+    chain:
+      name: Chain
+      description: Which supermarket chain to build the cart for.
+      required: true
+      selector:
+        select:
+          options:
+            - woolworths
+            - paknsave
+            - newworld
+
+approve_cart:
+  name: Approve cart
+  description: Approve the pending cart and add the items to the chain's online cart.
+
+relogin:
+  name: Re-login
+  description: >-
+    Force a fresh browser login for a chain (or all active chains if none is
+    given), replacing its stored session. Use when a chain shows "signed out".
+  fields:
+    chain:
+      name: Chain
+      description: Which chain to re-login. Leave empty to re-login all.
+      required: false
+      selector:
+        select:
+          options:
+            - woolworths
+            - paknsave
+            - newworld
+
+schedule_build:
+  name: Schedule daily build
+  description: Run "build cheapest cart" automatically at a set time each day.
+  fields:
+    time:
+      name: Time
+      description: Time of day (24h HH:MM).
+      required: true
+      example: "07:30"
+      selector:
+        time:
+
+rebuild_map:
+  name: Rebuild product map
+  description: >-
+    Rebuild the barcode-to-product map from your purchase history. Use after
+    the matcher starts picking the wrong products.

@@ -1,0 +1,21 @@
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+cookies.json
+
+# Login debug captures (screenshots/HTML of a signed-in session)
+debug/
+
+# Working notes and tooling — not part of the public integration
+.docs/
+.plans/
+.scripts/
+.claude/
+TODOS.md
+CLAUDE.md
+.mcp.json

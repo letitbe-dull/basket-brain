@@ -1,0 +1,129 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Basket Brain",
+        "description": "Pick which supermarkets to track.",
+        "data": {
+          "enabled_chains": " "
+        }
+      },
+      "stores": {
+        "title": "Choose your stores",
+        "description": "Prices differ by branch, so pick your preferred store. The branch nearest your Home Assistant location is listed first — change it if you shop elsewhere. Start typing to search.",
+        "data": {
+          "woolworths_store_id": "Woolworths store",
+          "paknsave_store_id": "PAK'nSAVE store",
+          "newworld_store_id": "New World store"
+        }
+      },
+      "primary_chain": {
+        "title": "Primary supermarket",
+        "description": "Choose where you shop most. Its order history is what makes your shopping list accurate.",
+        "data": {
+          "primary_chain": "Primary chain"
+        }
+      },
+      "foodstuffs_auth": {
+        "title": "Foodstuffs (Club+) login",
+        "description": "Enter your Club+ email and password. One Club+ login covers both PAK'nSAVE and New World.",
+        "data": {
+          "foodstuffs_email": "Club+ email",
+          "foodstuffs_password": "Club+ password"
+        }
+      },
+      "woolworths_auth": {
+        "title": "Woolworths login",
+        "description": "Enter your Woolworths email and password.",
+        "data": {
+          "woolworths_email": "Woolworths email",
+          "woolworths_password": "Woolworths password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Woolworths login",
+        "description": "Your Woolworths login was rejected. Re-enter your email and password.",
+        "data": {
+          "woolworths_email": "Woolworths email",
+          "woolworths_password": "Woolworths password"
+        }
+      },
+      "reauth_foodstuffs": {
+        "title": "Foodstuffs (Club+) login",
+        "description": "Your Club+ login was rejected. Re-enter your email and password.",
+        "data": {
+          "foodstuffs_email": "Club+ email",
+          "foodstuffs_password": "Club+ password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Login add-on unreachable. Check it's installed and running.",
+      "invalid_auth": "The shop rejected these credentials",
+      "addon_failed": "The Basket Brain Login add-on couldn't be installed or started. Check the Supervisor logs.",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "Already configured",
+      "reauth_successful": "Re-authentication successful",
+      "no_supervisor": "Basket Brain needs the Login add-on, and that needs Home Assistant OS or Supervised. Container and Core installs aren't supported."
+    }
+  },
+  "selector": {
+    "enabled_chains": {
+      "options": {
+        "woolworths": "Woolworths",
+        "paknsave": "PAK'nSAVE",
+        "newworld": "New World"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "login_woolworths": {
+        "name": "Woolworths signed in"
+      },
+      "login_paknsave": {
+        "name": "PAK'nSAVE signed in"
+      },
+      "login_newworld": {
+        "name": "New World signed in"
+      }
+    },
+    "sensor": {
+      "shopping_list": {
+        "name": "Shopping list"
+      },
+      "pending_cart": {
+        "name": "Pending cart",
+        "state": {
+          "none": "Nothing staged",
+          "woolworths": "Woolworths",
+          "paknsave": "PAK'nSAVE",
+          "newworld": "New World"
+        }
+      },
+      "basket_total_woolworths": {
+        "name": "Basket total Woolworths"
+      },
+      "basket_total_paknsave": {
+        "name": "Basket total PAK'nSAVE"
+      },
+      "basket_total_newworld": {
+        "name": "Basket total New World"
+      },
+      "items_woolworths": {
+        "name": "Items Woolworths"
+      },
+      "items_paknsave": {
+        "name": "Items PAK'nSAVE"
+      },
+      "items_newworld": {
+        "name": "Items New World"
+      },
+      "specials_alerts": {
+        "name": "Specials alerts"
+      }
+    }
+  }
+}

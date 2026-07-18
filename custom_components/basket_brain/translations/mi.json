@@ -1,0 +1,129 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Basket Brain",
+        "description": "Tīpakohia ngā hokomaha hei aroturuki.",
+        "data": {
+          "enabled_chains": " "
+        }
+      },
+      "stores": {
+        "title": "Tīpakohia ō toa",
+        "description": "He rerekē ngā utu i ia peka, nō reira tīpakohia tō toa e pai ai. Ko te peka tata ki tō wāhi Home Assistant kei runga rawa o te rārangi — hurihia mēnā ka hoko koe ki wāhi kē. Tīmata ki te tāuru kia rapu.",
+        "data": {
+          "woolworths_store_id": "Toa Woolworths",
+          "paknsave_store_id": "Toa PAK'nSAVE",
+          "newworld_store_id": "Toa New World"
+        }
+      },
+      "primary_chain": {
+        "title": "Hokomaha matua",
+        "description": "Tīpakohia te wāhi e nui ai tō hoko. Ko tōna hītori ōta te mea e tika ai tō rārangi hoko.",
+        "data": {
+          "primary_chain": "Hokomaha matua"
+        }
+      },
+      "foodstuffs_auth": {
+        "title": "Takiuru Foodstuffs (Club+)",
+        "description": "Tāurutia tō īmēra me tō kupuhipa Club+. Kotahi noa te takiuru Club+ e hīpoki ana i te PAK'nSAVE me te New World.",
+        "data": {
+          "foodstuffs_email": "Īmēra Club+",
+          "foodstuffs_password": "Kupuhipa Club+"
+        }
+      },
+      "woolworths_auth": {
+        "title": "Takiuru Woolworths",
+        "description": "Tāurutia tō īmēra me tō kupuhipa Woolworths.",
+        "data": {
+          "woolworths_email": "Īmēra Woolworths",
+          "woolworths_password": "Kupuhipa Woolworths"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Takiuru Woolworths",
+        "description": "I whakakāhoretia tō takiuru Woolworths. Tāurutia anō tō īmēra me tō kupuhipa.",
+        "data": {
+          "woolworths_email": "Īmēra Woolworths",
+          "woolworths_password": "Kupuhipa Woolworths"
+        }
+      },
+      "reauth_foodstuffs": {
+        "title": "Takiuru Foodstuffs (Club+)",
+        "description": "I whakakāhoretia tō takiuru Club+. Tāurutia anō tō īmēra me tō kupuhipa.",
+        "data": {
+          "foodstuffs_email": "Īmēra Club+",
+          "foodstuffs_password": "Kupuhipa Club+"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kāore e taea te toro atu ki te tāpiri takiuru. Tirohia kua tāutaina, kei te rere hoki.",
+      "invalid_auth": "I whakakāhoretia ēnei taipitopito takiuru e te toa",
+      "addon_failed": "Kāore i taea te tāuta, te tīmata rānei i te tāpiri Takiuru Basket Brain. Tirohia ngā rangitaki Supervisor.",
+      "unknown": "He hapa ohorere"
+    },
+    "abort": {
+      "already_configured": "Kua whirihoratia kē",
+      "reauth_successful": "I angitu te whakamana anō",
+      "no_supervisor": "Me whai a Basket Brain i te tāpiri Takiuru, ā, me whai tēnā i te Home Assistant OS, i te Supervised rānei. Kāore e tautokona ngā tāutanga Container, Core rānei."
+    }
+  },
+  "selector": {
+    "enabled_chains": {
+      "options": {
+        "woolworths": "Woolworths",
+        "paknsave": "PAK'nSAVE",
+        "newworld": "New World"
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "login_woolworths": {
+        "name": "Kua takiuru a Woolworths"
+      },
+      "login_paknsave": {
+        "name": "Kua takiuru a PAK'nSAVE"
+      },
+      "login_newworld": {
+        "name": "Kua takiuru a New World"
+      }
+    },
+    "sensor": {
+      "shopping_list": {
+        "name": "Rārangi hoko"
+      },
+      "pending_cart": {
+        "name": "Kete e tatari ana",
+        "state": {
+          "none": "Kāore he mea kua whakaritea",
+          "woolworths": "Woolworths",
+          "paknsave": "PAK'nSAVE",
+          "newworld": "New World"
+        }
+      },
+      "basket_total_woolworths": {
+        "name": "Tapeke kete Woolworths"
+      },
+      "basket_total_paknsave": {
+        "name": "Tapeke kete PAK'nSAVE"
+      },
+      "basket_total_newworld": {
+        "name": "Tapeke kete New World"
+      },
+      "items_woolworths": {
+        "name": "Ngā tūemi Woolworths"
+      },
+      "items_paknsave": {
+        "name": "Ngā tūemi PAK'nSAVE"
+      },
+      "items_newworld": {
+        "name": "Ngā tūemi New World"
+      },
+      "specials_alerts": {
+        "name": "Ngā matohi hokonga"
+      }
+    }
+  }
+}
