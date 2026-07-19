@@ -124,14 +124,14 @@ def _log_cookie_names(
             for c in sorted(cookies, key=_key)
         ) or "<none>"
 
-    log.info("COOKIE-DIAG %s: all domains  -> %s", shop, _fmt(all_cookies))
-    log.info("COOKIE-DIAG %s: harvested    -> %s", shop, _fmt(harvested))
-    log.info(
-        "COOKIE-DIAG %s: %d harvested, %d httpOnly",
-        shop,
-        len(harvested),
-        sum(1 for c in harvested if c.get("httpOnly")),
-    )
+    # log.info("COOKIE-DIAG %s: all domains  -> %s", shop, _fmt(all_cookies))
+    # log.info("COOKIE-DIAG %s: harvested    -> %s", shop, _fmt(harvested))
+    # log.info(
+    #     "COOKIE-DIAG %s: %d harvested, %d httpOnly",
+    #     shop,
+    #     len(harvested),
+    #     sum(1 for c in harvested if c.get("httpOnly")),
+    # )
 
 
 async def _perform_login(
@@ -180,18 +180,18 @@ async def _wait_until_signed_in(
         claims = await _current_user_claims(page)
         roles = claims.get("roles")
         if isinstance(roles, list) and "SHOPPER" in roles:
-            log.info(
-                "TOKEN-DIAG %s: signed in as %s (%dms)",
-                banner, claims.get("email"), timeout_ms - deadline,
-            )
+            # log.info(
+            #     "TOKEN-DIAG %s: signed in as %s (%dms)",
+            #     banner, claims.get("email"), timeout_ms - deadline,
+            # )
             return
         await page.wait_for_timeout(poll_ms)
         deadline -= poll_ms
 
-    log.warning(
-        "TOKEN-DIAG %s: still anonymous after %dms: roles=%r url=%s",
-        banner, timeout_ms, roles, page.url,
-    )
+    # log.warning(
+    #     "TOKEN-DIAG %s: still anonymous after %dms: roles=%r url=%s",
+    #     banner, timeout_ms, roles, page.url,
+    # )
     raise TransientLoginError(
         f"Club+ signed in but the shop never completed the handover "
         f"(roles={roles!r} after {timeout_ms // 1000}s)."

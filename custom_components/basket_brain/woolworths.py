@@ -37,15 +37,15 @@ class CookieExpiredError(Exception):
 def _check_response(response: httpx.Response) -> None:
     # WW-COOKIE-DIAG: does Woolworths rotate cookies on API responses? If this
     # never fires, rotation merging (the Foodstuffs fix) is irrelevant here.
-    rotated = sorted(response.cookies.keys())
-    if rotated:
-        _LOGGER.warning(
-            "WW-COOKIE-DIAG %s %s (%s): set_cookie=%r",
-            response.request.method,
-            response.request.url.path,
-            response.status_code,
-            rotated,
-        )
+    # rotated = sorted(response.cookies.keys())
+    # if rotated:
+    #     _LOGGER.warning(
+    #         "WW-COOKIE-DIAG %s %s (%s): set_cookie=%r",
+    #         response.request.method,
+    #         response.request.url.path,
+    #         response.status_code,
+    #         rotated,
+    #     )
     if response.status_code in (401, 403):
         raise CookieExpiredError(f"Session expired (HTTP {response.status_code})")
     response.raise_for_status()

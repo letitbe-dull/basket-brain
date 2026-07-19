@@ -152,18 +152,18 @@ class FoodstuffsClient:
 
         claims = _jwt_claims(token)
         roles = claims.get("roles")
-        _LOGGER.warning(
-            "TOKEN-DIAG %s: transition=%r roles=%r sub=%r email=%r "
-            "set_cookie=%r cookies_sent=%r",
-            self.banner,
-            transition,
-            roles,
-            claims.get("sub"),
-            claims.get("email"),
-            # cookies the server rotated this response (merged below on success)
-            sorted(resp.cookies.keys()),
-            sorted(self._cookies),
-        )
+        # _LOGGER.warning(
+        #     "TOKEN-DIAG %s: transition=%r roles=%r sub=%r email=%r "
+        #     "set_cookie=%r cookies_sent=%r",
+        #     self.banner,
+        #     transition,
+        #     roles,
+        #     claims.get("sub"),
+        #     claims.get("email"),
+        #     # cookies the server rotated this response (merged below on success)
+        #     sorted(resp.cookies.keys()),
+        #     sorted(self._cookies),
+        # )
         if isinstance(roles, list) and "ANONYMOUS" in roles:
             raise FoodstuffsCookieExpiredError(
                 f"Foodstuffs {self.banner} token is anonymous "
