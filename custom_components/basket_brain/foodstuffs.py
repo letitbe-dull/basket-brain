@@ -216,7 +216,14 @@ class FoodstuffsClient:
         token = await self._get_user_token()
         return {"Authorization": f"Bearer {token}"}
 
-    async def _authed_get(self, path: str) -> Any:
+    async def _authed_get(self, path: str, optional: bool = False) -> Any:
+        """GET an api-prod path with a bearer token.
+
+        @param path edge API path, including the `/v1/edge` prefix.
+        @param optional log 4xx at debug instead of error — for endpoints whose
+            absence is a normal account state, not a fault.
+        @returns the decoded JSON body.
+        """
         # api-prod takes a bearer token only — no cookies.
         headers = await self._auth_headers()
         async with httpx.AsyncClient(
@@ -236,7 +243,8 @@ class FoodstuffsClient:
                     banner=self.banner,
                 )
             if resp.status_code >= 400:
-                _LOGGER.error(
+                log = _LOGGER.debug if optional else _LOGGER.error
+                log(
                     "Foodstuffs %s GET %s failed (%s): %s",
                     self.banner, path, resp.status_code, resp.text[:500],
                 )
@@ -468,69 +476,45 @@ class FoodstuffsClient:
         return None
 
     async def get_specials(self) -> list[dict[str, Any]]:
-        """Return the user's history-relevant products currently on special.
+        """Return the account's relevant offers, one dict per product.
 
-        Combines personalised promotions with relevant offers from both
-        Foodstuffs endpoints. Each returned item has: barcode, product_id,
-        name, now_price, was_price. Empty list on any error.
+        @returns list of {barcode, product_id, name, now_price, was_price};
+            `barcode` is always None (the feed carries no GTIN — the caller
+            resolves it from the product map). Empty list on any error.
         """
-        results: list[dict[str, Any]] = []
-        seen_barcodes: set[str] = set()
-
-        for path in (
-            "/product/personalisedPromotions",
-            "/product/relevantOffers",
-        ):
-            try:
-                data = await self._authed_get(path)
-            except Exception:
-                continue
-
-            items = (
-                data.get("products")
-                or data.get("promotions")
-                or data.get("offers")
-                or data.get("items")
-                or (data if isinstance(data, list) else [])
+        # `/v1/edge/product/personalisedPromotions` is the other half of this
+        # feed. It carries promoIds only, so each one needs a follow-up call to
+        # /store/{storeId}/promotion/{promoId} to reach products — deferred.
+        try:
+            data = await self._authed_get(
+                "/v1/edge/product/relevantOffers", optional=True
             )
-            for p in items or []:
-                if not isinstance(p, dict):
-                    continue
-                # Each entry may be a promotion wrapper or a product directly.
-                product = p.get("product") or p
-                product_id = str(
-                    product.get("productId") or product.get("id") or ""
-                ).strip() or None
+        except Exception:
+            return []
 
-                # Barcode (GTIN) is on the product detail endpoint; promotions
-                # may carry it as `gtin` or `sku` directly.
-                barcode = str(
-                    product.get("gtin") or product.get("sku") or ""
-                ).strip() or None
+        offers = data.get("relevantOffers") if isinstance(data, dict) else data
+        results: list[dict[str, Any]] = []
+        seen_ids: set[str] = set()
 
-                if not barcode or barcode in seen_barcodes:
-                    continue
-                seen_barcodes.add(barcode)
+        for product in offers or []:
+            if not isinstance(product, dict):
+                continue
+            product_id = str(product.get("productId") or "").strip() or None
+            if not product_id or product_id in seen_ids:
+                continue
+            seen_ids.add(product_id)
 
-                single = product.get("singlePrice") or {}
-                now_cents = (
-                    p.get("price")
-                    or p.get("promotionPrice")
-                    or single.get("price")
-                )
-                was_cents = (
-                    p.get("originalPrice")
-                    or p.get("wasPrice")
-                    or single.get("originalPrice")
-                    or single.get("wasPrice")
-                )
-                results.append({
-                    "barcode": barcode,
-                    "product_id": product_id,
-                    "name": product.get("name") or product.get("displayName"),
-                    "now_price": _cents_to_dollars(now_cents),
-                    "was_price": _cents_to_dollars(was_cents),
-                })
+            shelf_cents = (product.get("singlePrice") or {}).get("price")
+            now_cents, was_cents = _offer_prices(
+                shelf_cents, product.get("promotions")
+            )
+            results.append({
+                "barcode": None,
+                "product_id": product_id,
+                "name": product.get("name") or product.get("displayName"),
+                "now_price": _cents_to_dollars(now_cents),
+                "was_price": _cents_to_dollars(was_cents),
+            })
 
         return results
 
@@ -570,6 +554,33 @@ def _cents_to_dollars(value: int | float | None) -> float | None:
     if value is None:
         return None
     return round(value / 100, 2)
+
+
+def _offer_prices(
+    shelf_cents: int | float | None, promotions: Any
+) -> tuple[int | float | None, int | float | None]:
+    """Split a relevantOffers entry into (now, was) prices, both in cents.
+
+    @param shelf_cents `singlePrice.price` — the undiscounted shelf price.
+    @param promotions the entry's `promotions` array, if present.
+    @returns (now, was); `was` is None for every reward type except NEW_PRICE,
+        whose `rewardValue` is the promoted price rather than a discount.
+    """
+    if not isinstance(promotions, list):
+        return shelf_cents, None
+    candidates = [p for p in promotions if isinstance(p, dict)]
+    best = next(
+        (p for p in candidates if p.get("bestPromotion")),
+        candidates[0] if candidates else None,
+    )
+    if not best or best.get("rewardType") != "NEW_PRICE":
+        return shelf_cents, None
+    reward = best.get("rewardValue")
+    if not isinstance(reward, (int, float)) or shelf_cents is None:
+        return shelf_cents, None
+    if reward >= shelf_cents:
+        return shelf_cents, None
+    return reward, shelf_cents
 
 
 def _normalise_product(hit: dict[str, Any]) -> dict[str, Any]:

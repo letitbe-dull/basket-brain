@@ -425,6 +425,11 @@ class BasketBrainCoordinator(DataUpdateCoordinator[dict[str, Any]]):
 
             for s in specials:
                 barcode = str(s.get("barcode") or "").strip()
+                if not barcode and s.get("product_id"):
+                    # Foodstuffs offers carry no GTIN — resolve via the map.
+                    barcode = self.product_map.find_gtin_by_product_id(
+                        chain, str(s["product_id"])
+                    ) or ""
                 if not barcode:
                     continue
                 if (barcode, chain) in seen:
