@@ -12,11 +12,11 @@ tags:
 
 This [Model2Vec](https://github.com/MinishLab/model2vec) model is a distilled version of a Sentence Transformer. It uses static embeddings, allowing text embeddings to be computed orders of magnitude faster on both GPU and CPU. It is designed for applications where computational resources are limited or where real-time performance is critical. Model2Vec models are the smallest, fastest, and most performant static embedders available. The distilled models are up to 50 times smaller and 500 times faster than traditional Sentence Transformers.
 
-
 ## Installation
 
 Install model2vec using pip:
-```
+
+```text
 pip install model2vec
 ```
 
@@ -27,6 +27,7 @@ pip install model2vec
 The [Model2Vec library](https://github.com/MinishLab/model2vec) is the fastest and most lightweight way to run Model2Vec models.
 
 Load this model using the `from_pretrained` method:
+
 ```python
 from model2vec import StaticModel
 
@@ -78,7 +79,6 @@ It works by passing a vocabulary through a sentence transformer model, then redu
 - [Model2Vec Results](https://github.com/MinishLab/model2vec/tree/main/results)
 - [Model2Vec Docs](https://minish.ai/packages/model2vec/introduction)
 
-
 ## Library Authors
 
 Model2Vec was developed by the [Minish Lab](https://github.com/MinishLab) team consisting of [Stephan Tulkens](https://github.com/stephantul) and [Thomas van Dongen](https://github.com/Pringled).
@@ -86,7 +86,8 @@ Model2Vec was developed by the [Minish Lab](https://github.com/MinishLab) team c
 ## Citation
 
 Please cite the [Model2Vec repository](https://github.com/MinishLab/model2vec) if you use this model in your work.
-```
+
+```text
 @software{minishlab2024model2vec,
   author       = {Stephan Tulkens and {van Dongen}, Thomas},
   title        = {Model2Vec: Fast State-of-the-Art Static Embeddings},

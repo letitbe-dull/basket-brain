@@ -1,7 +1,3 @@
-venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
 .coverage
 htmlcov/
 *.egg-info/
@@ -9,4 +5,34 @@ cookies.json
 
 # Login debug captures (screenshots/HTML of a signed-in session)
 debug/
+
+
+lib-cov
+*.cov
+coverage
+.coverage
+.coverage.*
+node_modules/
+*.log
+
+.cache/
+__pycache__/
+.pytest_cache/
+
+.rumdl_cache/
+.ruff_cache/
+
+.env
+.env.*
+
+.agents/
+.claude/
+venv/
+docs/
+.scratch/
+.tickets/
+
+
+
+.what
 

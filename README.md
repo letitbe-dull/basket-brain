@@ -111,6 +111,7 @@ Go to **Settings → Devices & Services → Add Integration**, then search for *
 The integration registers its own custom card. You don't need to add it to your resources manually.
 
 Add through the card picker or add custom yaml:
+
 ```yaml
 type: custom:basket-brain-card
 ```
