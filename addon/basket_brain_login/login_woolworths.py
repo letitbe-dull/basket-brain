@@ -13,6 +13,7 @@ import pathlib
 from datetime import datetime
 
 from camoufox.async_api import AsyncCamoufox
+from me_check import confirm_signed_in
 
 logger = logging.getLogger("basket_brain_login")
 
@@ -40,7 +41,7 @@ async def login_woolworths(email: str, password: str) -> list[dict]:
     """Perform a fresh Woolworths login and return harvested cookies.
 
     Returns a list of Playwright-format cookie dicts for the
-    woolworths.co.nz domain (includes the XSRF-TOKEN cookie).
+    woolworths.co.nz domain, confirmed signed in by the GraphQL `Me` query.
 
     Raises AuthError on any failure to complete the login flow.
     """
@@ -71,29 +72,15 @@ async def login_woolworths(email: str, password: str) -> list[dict]:
 
 
 async def _confirm_signed_in(page) -> bool:
-    """Judge signed-in state from the rendered page, then mint a fresh XSRF.
+    """Open the shop and ask the GraphQL `Me` query whether we're signed in.
 
-    XSRF-TOKEN is a session cookie — it does NOT survive a browser restart,
-    so cookie presence can't be the signal. A signed-in page shows "Kia ora"
-    and no sign-in link; browsing it makes the server set a fresh XSRF-TOKEN,
-    which the harvest (and the integration's mutation calls) need.
+    @param page: browser page
+    @returns True when `Me` answers with a Customer
     """
-    await page.goto("https://www.woolworths.co.nz", wait_until="domcontentloaded")
-    await page.wait_for_timeout(4000)  # Let the SPA render the header.
-
     with contextlib.suppress(Exception):
-        await page.wait_for_selector(
-            'a:has-text("Sign in")', timeout=3000, state="visible"
-        )
-        return False  # Sign-in link present — definitely logged out.
-
-    # No sign-in link. Wait for the page visit to mint the XSRF-TOKEN.
-    for _ in range(10):
-        cookies = await page.context.cookies()
-        if any(c["name"] == "XSRF-TOKEN" for c in cookies):
-            return True
-        await page.wait_for_timeout(1000)
-    return False
+        await page.goto("https://www.woolworths.co.nz", wait_until="domcontentloaded")
+        await page.wait_for_timeout(4000)  # Let Akamai sensor script finish.
+    return await confirm_signed_in(page)
 
 
 # The homepage's third-party scripts can leave the "Sign in" link slow to
@@ -132,9 +119,8 @@ async def _open_sign_in(page) -> None:
 
 async def _perform_login(page, email: str, password: str) -> None:
     # Direct entry: /shop/securelogin bounces logged-out visitors straight to
-    # Auth0. NO redirect is the signed-in signal — the persistent profile is
-    # still holding a live session, so confirm it, mint a fresh XSRF via the
-    # page visit, and skip the login entirely.
+    # Auth0. NO redirect means the persistent profile may still hold a live
+    # session, so confirm it with `Me` and skip the login entirely.
     redirected = False
     with contextlib.suppress(Exception):
         await page.goto(
@@ -191,13 +177,11 @@ async def _perform_login(page, email: str, password: str) -> None:
 
     await page.wait_for_timeout(2000)
 
-    cookies = await page.context.cookies()
-    have_xsrf = any(c["name"] == "XSRF-TOKEN" for c in cookies)
-    if not have_xsrf:
+    if not await _confirm_signed_in(page):
         # Ambiguous — wrong creds OR a bot check. Treat as transient so a live
         # session is never nuked into reauth on what may be a bot challenge.
         raise TransientLoginError(
-            "Login flow completed but XSRF-TOKEN cookie missing — "
+            "Login flow completed but Me did not answer as a signed-in customer — "
             "credentials may be wrong or bot check triggered."
         )
 

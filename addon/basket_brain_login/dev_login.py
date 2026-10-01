@@ -65,7 +65,7 @@ async def main() -> int:
     print(f"OK — {shop}: {len(cookies)} cookies")
     print("cookies:", ", ".join(names))
     # The token each flow relies on downstream.
-    key = "XSRF-TOKEN" if shop == "woolworths" else "refresh_token"
+    key = "__session" if shop == "woolworths" else "refresh_token"
     print(f"{key} present:", any(n == key for n in names))
     return 0
 

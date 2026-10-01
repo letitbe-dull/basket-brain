@@ -88,7 +88,7 @@ def _credentials_schema(email_key: str, password_key: str) -> vol.Schema:
 
 class BasketBrainConfigFlow(ConfigFlow, domain=DOMAIN):
     VERSION = 1
-    MINOR_VERSION = 2
+    MINOR_VERSION = 3
 
     def __init__(self) -> None:
         self._data: dict[str, Any] = {}

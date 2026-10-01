@@ -45,6 +45,12 @@ from custom_components.basket_brain.product_utils import (
         ("Milk", None),
         ("", None),
         ("Blue Label", None),
+        # Woolworths loose-produce selling rules are not pack sizes
+        ("Woolworths Fresh Bananas Yellow Loose Min Order 250g", None),
+        ("Min Order 250g", None),
+        ("Woolworths Fresh Fruit Grapes Red Imported per kg", None),
+        ("per kg", None),
+        ("Nashi Pears Min Order 1kg 2 Pack", (2.0, "each")),
     ],
 )
 def test_parse_size(text: str, expected: tuple[float, str] | None) -> None:

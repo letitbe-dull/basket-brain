@@ -1,0 +1,346 @@
+{
+  "data": {
+    "My": {
+      "product": {
+        "key": "369908",
+        "name": "Up&Go Liquid Breakfast Banana 250mL",
+        "category": [
+          {
+            "key": "187485",
+            "name": "F2532-UpGo-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "139816",
+            "name": "F2114 Super Insects Bonus Products - RW",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "195605",
+            "name": "F2633_Up&Go_KB",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "131973",
+            "name": "Taryn Online Birkenhead",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "139831",
+            "name": "F2114 Up & Go Bonus Card Pack Products - RW",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "147228",
+            "name": "F2151 Specials - AJ",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "144035",
+            "name": "F2137 Up & Go - EE",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "199161",
+            "name": "F27-Breakfast-Landingpage-AR",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "192826",
+            "name": "F2614 - Back to School Product Grid - CP",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "157861",
+            "name": "F2245 - Up&Go Competition - KR",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "182952",
+            "name": "F2503-BacktoSchoolTP-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "135078",
+            "name": "F2036 Up & Go - RW",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "131972",
+            "name": "Taryn BM Birkenhead",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "185269",
+            "name": "F2519-Sanitarium-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "158020",
+            "name": "F2245 Up and Go -SB",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "179992",
+            "name": "F2436 - Sanitarium - KB",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "148720",
+            "name": "myCD F2206 Hot Hot Up & Go",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "196602",
+            "name": "F2642-BacktoSchool-FullList-CP",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "196368",
+            "name": "F2639_3daysale_All_Products",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "182806",
+            "name": "F2504-Sanitarium-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "182793",
+            "name": "F2503-BacktoSchoolCarousel-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "139864",
+            "name": "F2114 Super Insects Up & Go & Oral-B Bonus Card Pa",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "147033",
+            "name": "F2151 Up & Go - EE",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "9-6FF6F47B",
+            "name": "Breakfast Drinks & Snacks",
+            "level": 3,
+            "parent": {
+              "key": "9-67D6EFDE",
+              "name": "Cereals & Spreads",
+              "level": 2,
+              "parent": {
+                "key": "9-4286804C",
+                "name": "Pantry",
+                "level": 1
+              }
+            }
+          },
+          {
+            "key": "196267",
+            "name": "F2639_Sanitarium Up & Go_ThreeDaySale_KRAJ",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "198278",
+            "name": "F2704-BTS_TP_sanitarium_SL",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "192292",
+            "name": "F2614-Sanitarium-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "179363",
+            "name": "F2434-Upngo-EP",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "155091",
+            "name": "masterdata",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          },
+          {
+            "key": "195598",
+            "name": "F2633-Sanitarium-LS",
+            "level": 0,
+            "parent": {
+              "key": "PG-0000",
+              "name": "Product Group Root",
+              "level": 0,
+              "parent": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

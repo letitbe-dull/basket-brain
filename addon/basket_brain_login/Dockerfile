@@ -59,7 +59,7 @@ ENV PATH="/venv/bin:$PATH"
 # newer playwright sends fields (e.g. viewport.isMobile) the browser rejects.
 # aiohttp — async HTTP server for the login API (Phase 2).
 RUN pip install --no-cache-dir \
-    "camoufox>=0.4.0" \
+    "camoufox==0.5.6" \
     "playwright==1.49.1" \
     "aiohttp>=3.9"
 
@@ -72,6 +72,7 @@ RUN chmod a+x /run.sh
 
 COPY server.py /app/server.py
 COPY login_woolworths.py /app/login_woolworths.py
+COPY me_check.py /app/me_check.py
 COPY login_foodstuffs.py /app/login_foodstuffs.py
 
 CMD ["/run.sh"]

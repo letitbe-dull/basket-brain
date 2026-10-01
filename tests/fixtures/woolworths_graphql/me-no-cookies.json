@@ -1,0 +1,1 @@
+{"data":null,"errors":[{"message":"HTTP fetch failed from 'customer-graph-wnz': 400: Bad Request","path":[],"extensions":{"code":"SUBREQUEST_HTTP_ERROR","service":"customer-graph-wnz","reason":"400: Bad Request","http":{"status":400}}},{"message":"Field 'me' is not allowed for guest users.","path":[],"extensions":{"code":"BANNED_OPERATION","service":"customer-graph-wnz"}}]}

@@ -1,1318 +1,1346 @@
 [
  {
-  "id": "3873690",
-  "name": "EXPRESS PU Spotswood",
-  "address": "Cnr Manadon St & South Rd",
+  "id": "9584",
+  "name": "Alexandra Woolworths",
+  "address": "106 Centennial Avenue, Alexandra",
   "lat": null,
   "lon": null
  },
  {
-  "id": "2479711",
-  "name": "Kaiaua Rays Rest Camp Reserve",
-  "address": "562 East Coast Rd, Kaiaua",
+  "id": "9518",
+  "name": "Amberley Woolworths",
+  "address": "Brakensfield Retail Centre, 129 Carters Road, Amberley",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9442",
+  "name": "Andersons Bay Woolworths",
+  "address": "560 Andersons Bay Road, Dunedin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9546",
+  "name": "Aotea Woolworths",
+  "address": "3A Whitford Brown Ave, Papakowhai, Porirua",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9115",
+  "name": "Ashburton South Woolworths",
+  "address": "2 South St, Ashburton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9181",
+  "name": "Ashburton Woolworths",
+  "address": "Cnr East & Peter Streets, Ashburton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9428",
+  "name": "Auckland Airport Woolworths",
+  "address": "Cnr Georgebolt Memorial & Cnr John Goulter Dr, Mangere",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9094",
+  "name": "Auckland City Woolworths",
+  "address": "76 Quay Street, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9478",
+  "name": "Avonhead Woolworths",
+  "address": "Cnr Withells Road & Merrin St, Avonhead",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9069",
+  "name": "Awapuni Woolworths",
+  "address": "520 Pioneer Highway, Palmerston North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9459",
+  "name": "Balclutha Woolworths",
+  "address": "8 - 12 Clyde Street, Balclutha",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9415",
+  "name": "Bayfair Woolworths",
+  "address": "Bayfair Shopping Centre, 1 - 19 Givern Rd, Mt Maunganui, Tauranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9177",
+  "name": "Beachlands Woolworths",
+  "address": "129 Beachlands Rd, Beachlands",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9554",
+  "name": "Belfast Woolworths",
+  "address": "755 Main North Road, Belfast, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9143",
+  "name": "Bethlehem Woolworths",
+  "address": "19 Bethlehem Road, Tauranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9145",
+  "name": "Birkenhead Woolworths",
+  "address": "Cnr Highbury Pass & Birkenhead Ave, Birkenhead",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9160",
+  "name": "Blenheim Woolworths",
+  "address": "51 Arthur Street, Blenheim",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9141",
+  "name": "Botany Downs Woolworths",
+  "address": "Cnr Te Irirangi & Ti Rakau Drives, Botany Downs",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9033",
+  "name": "Bridge Street Woolworths",
+  "address": "Cnr Bridge & Anglesea Street, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9224",
+  "name": "Browns Bay Woolworths",
+  "address": "Cnr Anzac & Clyde Rds, Browns Bay",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9050",
+  "name": "Bureta Park Woolworths",
+  "address": "44 - 50 Bureta Rd, Otumoetai, Tauranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9066",
+  "name": "Cable Car Lane Woolworths",
+  "address": "280 - 284 LAMBTON QUAY, Wellington",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9153",
+  "name": "Cambridge Woolworths",
+  "address": "Cnr Queen & Empire Streets, Cambridge",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9130",
+  "name": "Carlyle Woolworths",
+  "address": "33 Carlyle Street, Napier",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9221",
+  "name": "Chartwell Woolworths",
+  "address": "Chartwell Mall, Lyndon Court, Chartwell, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9090",
+  "name": "Christchurch Airport Woolworths",
+  "address": "530 - 546A Memorial Avenue, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9176",
+  "name": "Church Corner Woolworths",
+  "address": "Cnr Riccarton Road & Hansons Lane, Riccarton, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9473",
+  "name": "Claudelands Woolworths",
+  "address": "160 Peachgrove Road, Hamilton East",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9031",
+  "name": "Crofton Downs Woolworths",
+  "address": "124 Churchill Drive, Crofton Downs",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9032",
+  "name": "Dargaville Woolworths",
+  "address": "Dargaville Plaza, Victoria St, Dargaville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9432",
+  "name": "Dinsdale Woolworths",
+  "address": "47 Whatawhata Road, Dinsdale, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9190",
+  "name": "Dunedin Central Woolworths",
+  "address": "309 Cumberland Street, Dunedin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9524",
+  "name": "Dunedin South Woolworths",
+  "address": "323 Andersons Bay Road, Dunedin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "3873690",
+  "name": "EXPRESS PU Spotswood",
+  "address": "Cnr Manadon St & South Rd, Spotswood",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9178",
+  "name": "Eastgate Woolworths",
+  "address": "6 Buckleys Rd, Linwood, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9173",
+  "name": "Fairy Springs Woolworths",
+  "address": "54 Fairy Springs Road, Rotorua",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9501",
+  "name": "Feilding Woolworths",
+  "address": "Cnr Kimbolton & Welds Streets, Feilding",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9292",
+  "name": "Ferrymead Woolworths",
+  "address": "999 Ferry Rd, Ferrymead, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9702",
+  "name": "Flaxmere Woolworths",
+  "address": "4 Swansea Road, Flaxmere",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9113",
+  "name": "Fraser Cove Woolworths",
+  "address": "Fraser Cover Shopping Centre, 229 - 233 Fraser St, Tauranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9238",
+  "name": "Gisborne Woolworths",
+  "address": "109-115 Carnarvon St, Gisborne",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9163",
+  "name": "Glenfield Woolworths",
+  "address": "Glenfield Mall, Bentley Ave, Glenfield",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9092",
+  "name": "Gore Woolworths",
+  "address": "24 Medway Street, Gore",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9128",
+  "name": "Greenlane Woolworths",
+  "address": "326 Great South Road, Greenlane, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9171",
+  "name": "Greville Road Woolworths",
+  "address": "65 Greville Road, Pinehill",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9068",
+  "name": "Grey Lynn Woolworths",
+  "address": "271 Richmond Rd, Grey Lynn, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9469",
+  "name": "Greymouth Woolworths",
+  "address": "174 Mawhera Quay, Greymouth",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9736",
+  "name": "Halswell Woolworths (Opening soon)",
+  "address": "5 Timberyard Drive, Hallswell",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9192",
+  "name": "Hamilton Woolworths",
+  "address": "Cnr Anglesea & Liverpool Streets, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9433",
+  "name": "Hastings Woolworths",
+  "address": "301 Queen Street West, Hastings",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9431",
+  "name": "Hawera Woolworths",
+  "address": "39 Nelson St, Hawera",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9534",
+  "name": "Helensville Woolworths",
+  "address": "43 Commercial Road, Helensville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9194",
+  "name": "Henderson Woolworths",
+  "address": "West City Shopping Centre, 7 Catherine Street, Henderson",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9142",
+  "name": "Highland Park Woolworths",
+  "address": "507 Pakuranga Road, Highland Park",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9551",
+  "name": "Hobsonville Woolworths",
+  "address": "124 Hobsonville Road, Hobsonville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9121",
+  "name": "Hornby Woolworths",
+  "address": "17 Chappie Place, Hornby, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9243",
+  "name": "Howick Woolworths",
+  "address": "35 Cook St, Howick",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9164",
+  "name": "Huntly Woolworths",
+  "address": "16 - 18 Tumate Mahuta Drive, Huntly",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9191",
+  "name": "Invercargill Woolworths",
+  "address": "172 Tay Street, Invercargill",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9158",
+  "name": "Johnsonville Mall Woolworths",
+  "address": "Moorefield Road, Johnsonville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9547",
+  "name": "Johnsonville Woolworths",
+  "address": "71 Johnsonville Road, Johnsonville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9175",
+  "name": "Kaiapoi Woolworths",
+  "address": "87-97 Hilton Street, Kaiapoi",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "2479718",
+  "name": "Kaihu War Memorial Hall",
+  "address": "43 Kaihu Wood Road, Kaihu",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "2479713",
+  "name": "Kaikohe Trade",
+  "address": "37 Station Road, Kaikohe",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9530",
+  "name": "Karori Woolworths",
+  "address": "Karori Shopping Centre, Karori Road, Karori",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9453",
+  "name": "Katikati Woolworths",
+  "address": "123 - 131 Main Road, Katikati",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9146",
+  "name": "Kelston Woolworths",
+  "address": "Cnr Great North & West Coast Road, Glen Eden",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9424",
+  "name": "Kelvin Grove Woolworths",
+  "address": "7 Fernlea Ave, Kelvin Grove, Palmerston North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9502",
+  "name": "Kerikeri Woolworths",
+  "address": "Cnr Kerikeri & Butler Rds, Kerikeri",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9474",
+  "name": "Kilbirnie Woolworths",
+  "address": "47 Bay Road, Kilbirnie",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9102",
+  "name": "Levin Woolworths",
+  "address": "Cnr Bristol & Stanley Sts, Levin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9038",
+  "name": "Lincoln Road Woolworths",
+  "address": "185-187 Universal Drive, Henderson",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9156",
+  "name": "Lower Hutt Woolworths",
+  "address": "261 High Street, Lower Hutt",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9140",
+  "name": "Lynfield Woolworths",
+  "address": "570 Hillsborough Road, Lynfield",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9149",
+  "name": "Lynnmall Woolworths",
+  "address": "Lynnmall Shopping Centre, Great North Road, New Lynn",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9185",
+  "name": "Mailer St Woolworths",
+  "address": "43 Mailer Street, Dunedin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9248",
+  "name": "Mairangi Bay Woolworths",
+  "address": "3 Ramsgate Terrace, Mairangi Bay",
   "lat": null,
   "lon": null
  },
  {
   "id": "2119357",
   "name": "Makahu Hall",
-  "address": "835 Mangaehu Road, Makahu, Makahu Hall Click and Collect, 4392",
+  "address": "835 Mangaehu Road, Makahu",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9486",
+  "name": "Mangere East Woolworths",
+  "address": "359 Massey Rd, Mangere",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9096",
+  "name": "Manukau City Mall Woolworths",
+  "address": "Shop 99 Manukau City Centre, Cnr Great South & Wiri Station Rds, Manukau",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9161",
+  "name": "Manukau Woolworths",
+  "address": "652 Great South Road, Manukau",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9400",
+  "name": "Manurewa Woolworths",
+  "address": "227 Browns Road, Manurewa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9098",
+  "name": "Masterton Woolworths",
+  "address": "Cnr Workshop & Queen Sts, Masterton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9120",
+  "name": "Matamata Woolworths",
+  "address": "Cnr Arawa & Gouk Sts, Matamata",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9444",
+  "name": "Meadowbank Woolworths",
+  "address": "35-47 St Johns Road, Meadowbank",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9458",
+  "name": "Meadowlands Woolworths",
+  "address": "Cnr Meadowlands Drive & Whitford Road, Howick",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9437",
+  "name": "Metro Albert Street Woolworths",
+  "address": "AMP Centre, Ground Floor, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9283",
+  "name": "Metro Auckland Victoria Street West",
+  "address": "19-25 Victoria Street, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9435",
+  "name": "Metro Halsey Street",
+  "address": "104 Pakenham Street West, Auckland Central 1010, Auckland Central",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9249",
+  "name": "Metro Herne Bay",
+  "address": "1 Kelmarna Avenue, Herne Bay",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9198",
+  "name": "Milford Woolworths",
+  "address": "Milford Shopping Centre, Milford Rd, Milford",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9169",
+  "name": "Moorhouse Ave Woolworths",
+  "address": "347 Moorhouse Ave, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9114",
+  "name": "Morrinsville Woolworths",
+  "address": "66 Studholme Street, Morrinsville",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9118",
+  "name": "Mosgiel Woolworths",
+  "address": "55 Gordon Rd, Mosgiel, Dunedin",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9495",
+  "name": "Motueka Woolworths",
+  "address": "108 High Street, Motueka",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9235",
+  "name": "Mount Eden Woolworths",
+  "address": "Cnr Valley & Dominion Roads, Mt Eden, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9034",
+  "name": "Mount Roskill Woolworths",
+  "address": "112 Stoddard Road, Mt Roskill, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9193",
+  "name": "Mount Wellington Woolworths",
+  "address": "Cnr Penrose Rd & Mt Wellington Hway, Mt Wellington",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9136",
+  "name": "Napier Woolworths",
+  "address": "Cnr Munroe & Dickens Streets, Napier",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9290",
+  "name": "Nelson Junction Woolworths",
+  "address": "33 Cadillac Way, Nelson",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9159",
+  "name": "Nelson Woolworths",
+  "address": "35 St Vincent Street, Nelson",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9485",
+  "name": "New Brighton Woolworths",
+  "address": "12 Hawke Street, New Brighton, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9528",
+  "name": "New Plymouth Central Woolworths",
+  "address": "174 Courtenay Street, New Plymouth",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9405",
+  "name": "Newmarket Woolworths",
+  "address": "Level 3, Westfield Newmarket, 277 Broadway, Newmarket",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9508",
+  "name": "Newtown Woolworths",
+  "address": "3 John Street, Mount Cook",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9477",
+  "name": "Northcote Woolworths",
+  "address": "Pearn Crescent, Northcote",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9174",
+  "name": "Northlands Woolworths",
+  "address": "Cnr Main North Rd & Sawyers Arms Rd, Papanui, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9064",
+  "name": "Northwest Woolworths",
+  "address": "7 Fred Taylor Drive, Northwest Town Centre, Westgate, Massey",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9182",
+  "name": "Oamaru Woolworths",
+  "address": "108-116 Thames St, Oamaru",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9091",
+  "name": "Onehunga Woolworths",
+  "address": "Cnr Church St & Selwyn St, Onehunga, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9061",
+  "name": "Orewa Woolworths",
+  "address": "Moenui Avenue, Orewa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9430",
+  "name": "Otorohanga Woolworths",
+  "address": "119-123 Maniapoto St, Ototohanga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9011",
+  "name": "Paeroa Woolworths",
+  "address": "27 Belmont Road, Paeroa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9204",
+  "name": "Pakuranga Woolworths",
+  "address": "Pakuranga Town Centre, Pakuranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9465",
+  "name": "Palmerston North Broadway Woolworths",
+  "address": "Cnr Albert & Main St, Palmerston North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9155",
+  "name": "Palmerston North Woolworths",
+  "address": "Cnr Ferguson & Ashley Streets, Palmerston North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9144",
+  "name": "Papakura Woolworths",
+  "address": "2 Averill Street, Papakura",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9472",
+  "name": "Papamoa Woolworths",
+  "address": "Papamoa Shopping Centre, Domain Rd, Royal Palm Beach, Papamoa",
   "lat": null,
   "lon": null
  },
  {
   "id": "2315277",
   "name": "Paparoa Hall",
-  "address": "2056 Paparoa Valley Road, Paparoa Hall Click and Collect",
+  "address": "2056 Paparoa Valley Road, Paparoa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9106",
+  "name": "Papatoetoe Woolworths",
+  "address": "Hunters Plaza, 217 Great South Rd, Papatoetoe",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9460",
+  "name": "Paraparaumu Woolworths",
+  "address": "Coastlands Shopping Centre, Paraparaumu",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9535",
+  "name": "Petone Woolworths",
+  "address": "45 Jackson Street, Petone",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9233",
+  "name": "Pokeno Woolworths",
+  "address": "58 Great South Road, Pokeno",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9057",
+  "name": "Ponsonby Woolworths",
+  "address": "4 Williamson Ave, Ponsonby",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9154",
+  "name": "Porirua Woolworths",
+  "address": "Cnr Parumoana St & Lyttleton Avenue, Porirua",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9123",
+  "name": "Pt Chevalier Woolworths",
+  "address": "13 Pt Chevalier Road, Point Chevalier, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9107",
+  "name": "Pukekohe South Woolworths",
+  "address": "186-192 Manukau Rd, Pukekohe",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9199",
+  "name": "Pukekohe Woolworths",
+  "address": "Cnr Tobin & Seddon Sts, Pukekohe",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9095",
+  "name": "Putaruru Woolworths",
+  "address": "Tirau Street, Putaruru",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9489",
+  "name": "Queensgate Woolworths",
+  "address": "Queensgate Shopping Centre, 35 Bloomfield Terrace, Lower Hutt",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9058",
+  "name": "Queenstown Woolworths",
+  "address": "30 Grant Rd, Frankton, Queenstown",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9284",
+  "name": "Rangiora East Woolworths",
+  "address": "40-54 Ivory Street, Rangiora, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9119",
+  "name": "Rangitikei St Woolworths",
+  "address": "Cnr Rangitikei & Featherston St, Palmerston North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "2479711",
+  "name": "Rays Rest Camp Reserve",
+  "address": "562 East Coast Rd, Kaiaua",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9212",
+  "name": "Redwoodtown Woolworths",
+  "address": "Cnr Weld St & Alabama Rd, Blenheim",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9048",
+  "name": "Regent Woolworths",
+  "address": "11 Kamo Road, Regent, Whangarei",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9040",
+  "name": "Richmond Woolworths",
+  "address": "144 Salisbury Rd, Richmond",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9131",
+  "name": "Rolleston Woolworths",
+  "address": "Cnr Mccauley St & Rolleston Dr, Rolleston, Christchurch",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9014",
+  "name": "Roselands Mall Woolworths",
+  "address": "90-96 Great South Road, Papakura",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9189",
+  "name": "Rotorua Woolworths",
+  "address": "246 Fenton Street, Rotorua",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9037",
+  "name": "Rototuna Woolworths",
+  "address": "3 Fergy Place, Rototuna North",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9504",
+  "name": "Silverdale Woolworths",
+  "address": "40 Hibiscus Coast Highway, Silverdale",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9425",
+  "name": "Spotswood Woolworths",
+  "address": "Cnr Manadon St & South Rd, New Plymouth",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9578",
+  "name": "Springlands Woolworths",
+  "address": "133 Middle Renwick Road, Blenheim",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9103",
+  "name": "St James Woolworths",
+  "address": "Cnr Hukunui & Thomas Rds, Rototuna, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9521",
+  "name": "St Johns Woolworths",
+  "address": "130-140 Felton Mathew Avenue, St Johns",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9216",
+  "name": "St Lukes Woolworths",
+  "address": "Saint Lukes Shopping Centre, Cnr St Lukes Rd & Morningside Dr, Mt Albert, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9168",
+  "name": "Stoke Woolworths",
+  "address": "Cnr Putaitai Street & Main Road, Stoke",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9062",
+  "name": "Stratford Woolworths",
+  "address": "21A - 27 Broadway, Stratford",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9197",
+  "name": "Sunnynook Woolworths",
+  "address": "Cnr Sycamore Dr & Sunnynook Rd, Sunnynook",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9202",
+  "name": "Takanini Woolworths",
+  "address": "228 Great South Road, Takanini",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9237",
+  "name": "Takapuna Woolworths",
+  "address": "Barry's Point Road, Takapuna",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9293",
+  "name": "Taupo Central Woolworths",
+  "address": "Cnr of Spa Rd and Tongariro St, Taupo",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9414",
+  "name": "Taupo South Woolworths",
+  "address": "16 Kokomea Village Drive, Taupo",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9162",
+  "name": "Tauranga Woolworths",
+  "address": "618 Cameron Road, Tauranga",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9475",
+  "name": "Tawa Woolworths",
+  "address": "5 William Earp Place, Tawa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9452",
+  "name": "Te Aroha Woolworths",
+  "address": "85 Whitaker Street, Te Aroha",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9206",
+  "name": "Te Atatu South Woolworths",
+  "address": "Cnr Edmonton & Te Atatu Roads, Te Atatu South",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9449",
+  "name": "Te Awamutu Woolworths",
+  "address": "180 Sloane Street, Te Awamutu",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9448",
+  "name": "Te Puke Woolworths",
+  "address": "Cnr Queen & Boucher St, Te Puke",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9282",
+  "name": "Te Rapa Woolworths",
+  "address": "8 Eagle Way, Te Rapa, Hamilton",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9100",
+  "name": "The Palms Woolworths",
+  "address": "The Palms Plaza, Marshland Road, Shirley",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9133",
+  "name": "The Valley Woolworths",
+  "address": "The Valley Mega Centre, 1 Vickers Road, Waiwhakaiho, New Plymouth",
   "lat": null,
   "lon": null
  },
  {
   "id": "2325409",
-  "name": "Ruawai outside The Well Cafe",
-  "address": "Freyberg Street",
+  "name": "The Well Cafe",
+  "address": "23 Freyberg Street, Ruawai",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9529",
+  "name": "Three Kings Woolworths",
+  "address": "532 Mt Albert Road, Three Kings, Auckland",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9124",
+  "name": "Tikipunga Woolworths",
+  "address": "Cnr Paramount Parade & Wanaka St, Tikipunga, Whangarei",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9213",
+  "name": "Timaru North Woolworths",
+  "address": "The Showgrounds, 233 Evans Street, Timaru",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9183",
+  "name": "Timaru Woolworths",
+  "address": "9 Browne Street, Timaru",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9541",
+  "name": "Tokoroa Woolworths",
+  "address": "12 - 20 O'Sullivan Dr, Tokoroa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9427",
+  "name": "Trafalgar Park Woolworths",
+  "address": "Cnr Paru paru Rd & Halifax St, Nelson",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9157",
+  "name": "Upper Hutt Woolworths",
+  "address": "13-19 Queen Street, Upper Hutt",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9129",
+  "name": "Victoria Ave Woolworths",
+  "address": "433 Victoria Ave, Wanganui",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9063",
+  "name": "Vogeltown Woolworths",
+  "address": "30 Hori Street, Vogeltown, New Plymouth",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9464",
+  "name": "Waiata Shores Woolworths",
+  "address": "2 Periko Way, Takanini",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9030",
+  "name": "Waiheke Island Woolworths",
+  "address": "13 - 19 Belgium St, Waiheke Island, Ostend",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9522",
+  "name": "Waikanae Woolworths",
+  "address": "Ngaio Road, Waikanae",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9429",
+  "name": "Waikiwi Woolworths",
+  "address": "Cnr North Road & Durham Street, Waikiwi, Invercargill",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9077",
+  "name": "Waimakariri Junction Woolworths",
+  "address": "6 Hakarau Road, Kaiapoi, Waimakariri",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9065",
+  "name": "Wainuiomata Woolworths",
+  "address": "9 Te Ara Raukura, Wainuiomata, Lower Hutt 5014, Lower Hutt",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9463",
+  "name": "Waipukurau Woolworths",
+  "address": "Rautaniwha St, Waipukurau",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9013",
+  "name": "Waitangi Woolworths",
+  "address": "9 Puketona Road, Paihia",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9533",
+  "name": "Warkworth Woolworths",
+  "address": "20 - 26 Neville Street, Warkworth",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9147",
+  "name": "Westgate Woolworths",
+  "address": "Westgate Shopping Centre, Cnr Westgate & Fern Hill Drive, Massey",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9170",
+  "name": "Whakatane Woolworths",
+  "address": "105-125 Commerce St, Whakatane",
   "lat": null,
   "lon": null
  },
  {
   "id": "1346623",
   "name": "Whangamomona Hall",
-  "address": "6013 Ohura Road, Whangamomona, Whangamomona Hall ClickCollect",
+  "address": "6013 Ohura Road, Whangamomona",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9151",
+  "name": "Whanganui Woolworths",
+  "address": "Trafalgar Sqr, Cnr Taupo Quay & Wilson Street, Whanganui",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9242",
+  "name": "Whangaparaoa Woolworths",
+  "address": "Cnr Whangaparaoa & Wade Drive, Whangaparaoa",
+  "lat": null,
+  "lon": null
+ },
+ {
+  "id": "9195",
+  "name": "Whangarei Woolworths",
+  "address": "Whangarei Retail Centre, Okara Drive, Whangarei",
   "lat": null,
   "lon": null
  },
  {
   "id": "4251868",
   "name": "Whangaruru",
-  "address": "Whangarei Retail Centre Okara Drive, Whangarei, 110",
+  "address": "2355 Russell Road, Ōakura",
   "lat": null,
   "lon": null
  },
  {
   "id": "4472132",
-  "name": "Whangaruru – Ngaiotonga Marae",
-  "address": "Okara Drive, Retail Centre, Whangarei, 0110",
+  "name": "Whangaruru – Ngāiotonga Marae",
+  "address": "1561 Rawhiti Road, Whangaruru",
   "lat": null,
   "lon": null
  },
  {
-  "id": "3496448",
-  "name": "Woolworths Alexandra",
-  "address": "106 Centennial Avenue, Alexandra, Alexandra Pickup",
-  "lat": -45.2491,
-  "lon": 169.3853
+  "id": "9049",
+  "name": "Whitianga Woolworths",
+  "address": "24 Joan Gaskell Drive, Whitianga",
+  "lat": null,
+  "lon": null
  },
  {
-  "id": "861615",
-  "name": "Woolworths Amberley",
-  "address": "Cnr Carters and Amberley Beach Roads, Amberley Click and Collect, 7410",
-  "lat": -43.1569,
-  "lon": 172.7301
- },
- {
-  "id": "2810973",
-  "name": "Woolworths Andersons Bay",
-  "address": "560 Andersons Bay Road, South Dunedin, Andy Bay Click and Collect, 9012",
-  "lat": -45.8967,
-  "lon": 170.5092
- },
- {
-  "id": "1050811",
-  "name": "Woolworths Aotea",
-  "address": "3 Whitford Brown Ave, Papakowhai, Aotea Click and Collect, Wellington AO",
-  "lat": -41.1202,
-  "lon": 174.8668
- },
- {
-  "id": "1155526",
-  "name": "Woolworths Ashburton",
-  "address": "Cnr East and Peter Streets, Ashburton, Ashburton Click and Collect",
-  "lat": -43.902,
-  "lon": 171.7519
- },
- {
-  "id": "1155560",
-  "name": "Woolworths Ashburton South",
-  "address": "Cnr South St and East St, Ashburton, Ashburton South Click Collect",
-  "lat": -43.9085,
-  "lon": 171.7418
- },
- {
-  "id": "1189112",
-  "name": "Woolworths Auckland Airport",
-  "address": "George Bolt Memorial & John Goulter Dr, Mangere, AKL Airport CC, 2022, AKL Airport Click and Collect",
-  "lat": -36.9976,
-  "lon": 174.789
- },
- {
-  "id": "1906035",
-  "name": "Woolworths Auckland Quay Street",
-  "address": "76 Quay Street, Auckland City, Auckland City Click & Collect",
-  "lat": -36.845,
-  "lon": 174.773
- },
- {
-  "id": "882226",
-  "name": "Woolworths Auckland Victoria Street West",
-  "address": "19-25 Victoria Street West, Vic St West Click & Collect, Auckland VSW",
-  "lat": -36.8486,
-  "lon": 174.7647
- },
- {
-  "id": "2447192",
-  "name": "Woolworths Avonhead",
-  "address": "Cnr Withells Road & Merrin Street, Avonhead Click and Collect, 8042",
-  "lat": -43.5112,
-  "lon": 172.5573
- },
- {
-  "id": "3175333",
-  "name": "Woolworths Awapuni",
-  "address": "530 Pioneer Highway, Awapuni Click and Collect, 4412",
-  "lat": -40.3703,
-  "lon": 175.5804
- },
- {
-  "id": "3274314",
-  "name": "Woolworths Balclutha",
-  "address": "8-12 Charles Streets, Balclutha Pickup, 9230",
-  "lat": -46.2369,
-  "lon": 169.7408
- },
- {
-  "id": "1497678",
-  "name": "Woolworths Bayfair",
-  "address": "1-19 Girven Road, Mt Manganui, Bayfair Click and Collect",
-  "lat": -37.6757,
-  "lon": 176.2241
- },
- {
-  "id": "1109324",
-  "name": "Woolworths Beachlands",
-  "address": "129 Beachlands Road, Beachlands Click and Collect",
-  "lat": -36.8898,
-  "lon": 175.0083
- },
- {
-  "id": "3385698",
-  "name": "Woolworths Belfast",
-  "address": "755 Main North Road, Belfast Pickup",
-  "lat": -43.4483,
-  "lon": 172.6297
- },
- {
-  "id": "1222024",
-  "name": "Woolworths Bethlehem",
-  "address": "19 Bethlehem Road, Bethlehem Click and Collect, 3110",
-  "lat": -37.6947,
-  "lon": 176.1088
- },
- {
-  "id": "2124460",
-  "name": "Woolworths Birkenhead",
-  "address": "Cnr Highbury Pass & Birkenhead Avenue, Auckland, Birkenhead Click and Collect",
-  "lat": -36.8113,
-  "lon": 174.7248
- },
- {
-  "id": "950553",
-  "name": "Woolworths Blenheim",
-  "address": "51 Seymour St, Blenheim, Blenheim Click and Collect, 7201",
-  "lat": -41.5136,
-  "lon": 173.9543
- },
- {
-  "id": "1225547",
-  "name": "Woolworths Botany",
-  "address": "cnr Te Irirangi & Ti Rakau Drives, Botany Downs CC, 2010, Botany Downs Click and Collect",
-  "lat": -36.9299,
-  "lon": 174.9112
- },
- {
-  "id": "1207646",
-  "name": "Woolworths Bridge St",
-  "address": "Cnr Bridge St and Anglesea St, Bridge St Click and Collect",
-  "lat": -37.7934,
-  "lon": 175.2863
- },
- {
-  "id": "1226867",
-  "name": "Woolworths Broadway",
-  "address": "Main Street, Broadway Click and Collect, 4471",
-  "lat": -40.35,
-  "lon": 175.6238
- },
- {
-  "id": "2683184",
-  "name": "Woolworths Browns Bay",
-  "address": "Cnr Anzac & Clyde Road, Browns Bay Click and Collect, 0630",
-  "lat": -36.7175,
-  "lon": 174.7474
- },
- {
-  "id": "1175393",
-  "name": "Woolworths Bureta Park",
-  "address": "40-50 Bureta Road, Otumoetai, Bureta Park Click and Collect",
-  "lat": -37.6683,
-  "lon": 176.1533
- },
- {
-  "id": "953090",
-  "name": "Woolworths Cable Car Lane",
-  "address": "280-284 Lambton Quay, Wellington, Cable Car Lane Click & Collect, Wellington CCL",
-  "lat": -41.2843,
-  "lon": 174.7743
- },
- {
-  "id": "1332617",
-  "name": "Woolworths Cambridge",
-  "address": "Cnr Queen & Empire Streets, Cambridge, Cambridge Click and Collect",
-  "lat": -37.8923,
-  "lon": 175.4702
- },
- {
-  "id": "2770176",
-  "name": "Woolworths Carlyle",
-  "address": "36 Carlyle Street, Napier South, Carlyle Click and Collect, 4110",
-  "lat": -39.4928,
-  "lon": 176.9113
- },
- {
-  "id": "264573",
-  "name": "Woolworths Chartwell",
-  "address": "Chartwell Mall, CW Click & Collect, 3210, Hamilton CW",
-  "lat": -37.7505,
-  "lon": 175.278
- },
- {
-  "id": "1203274",
-  "name": "Woolworths Christchurch Airport",
-  "address": "530 - 546A Memorial Ave, Christchurch, Chch Airport Click and Collect",
-  "lat": -43.4899,
-  "lon": 172.5477
- },
- {
-  "id": "1188758",
-  "name": "Woolworths Church Corner",
-  "address": "Cnr Riccarton Rd & Hansons Lane, Christchurch, Church Cnr Click and Collect, 8041",
-  "lat": -43.5327,
-  "lon": 172.573
- },
- {
-  "id": "904435",
-  "name": "Woolworths Claudelands",
-  "address": "160 Peach Grove Road, Hamilton East, Claudelands Click and Collect",
-  "lat": -37.7785,
-  "lon": 175.299
- },
- {
-  "id": "1188761",
+  "id": "9180",
   "name": "Woolworths Colombo St",
-  "address": "219 Colombo St, Christchurch, Colombo St Click and Collect, 8023",
-  "lat": -43.5533,
-  "lon": 172.6356
- },
- {
-  "id": "630366",
-  "name": "Woolworths Crofton Downs",
-  "address": "Churchill Drive, Crofton Downs Click and Collct, Wellington CD",
-  "lat": -41.2572,
-  "lon": 174.7659
- },
- {
-  "id": "2683237",
-  "name": "Woolworths Dargaville",
-  "address": "Dargaville Plaza, Victoria Street, Dargaville Click and Collect, 0310",
-  "lat": -35.9394,
-  "lon": 173.8729
- },
- {
-  "id": "1060362",
-  "name": "Woolworths Dinsdale",
-  "address": "47 Whatawhata Rd, Hamilton, Dinsdale Click and Collect",
-  "lat": -37.7964,
-  "lon": 175.2454
- },
- {
-  "id": "1226961",
-  "name": "Woolworths Dunedin Central",
-  "address": "309 Cumberland Street, Dunedn Cntrl Pickup, 9016, Dunedin Cnt Click and Collect",
-  "lat": -45.8742,
-  "lon": 170.5064
- },
- {
-  "id": "2791790",
-  "name": "Woolworths Dunedin South",
-  "address": "323 Andersons Bay Road, South Dunedin, Dunedin S Click and Collect, 9012",
-  "lat": -45.8926,
-  "lon": 170.5027
- },
- {
-  "id": "2810806",
-  "name": "Woolworths Eastgate",
-  "address": "6 Buckleys Road, Linwood, Christchurch, Eastgate Click and Collect, 8062",
-  "lat": -43.5323,
-  "lon": 172.6297
- },
- {
-  "id": "904436",
-  "name": "Woolworths Fairy Springs",
-  "address": "54 Fairy Springs Road, FairySprings Click and Collect",
-  "lat": -38.1201,
-  "lon": 176.228
- },
- {
-  "id": "1155534",
-  "name": "Woolworths Feilding",
-  "address": "Cnr Kimbolton and Weld Streets, Feilding, Feilding Click and Collect",
-  "lat": -40.2252,
-  "lon": 175.5686
- },
- {
-  "id": "2176651",
-  "name": "Woolworths Ferrymead",
-  "address": "999 Ferry Road, Christchurch, Ferrymead Click and Collect",
-  "lat": -43.5569,
-  "lon": 172.7023
- },
- {
-  "id": "4466375",
-  "name": "Woolworths Flaxmere",
-  "address": "4 Swansea Road, Flaxmere Pick Up, 4120",
+  "address": "219 Colombo Street, Christchurch",
   "lat": null,
   "lon": null
- },
- {
-  "id": "1225707",
-  "name": "Woolworths Fraser Cove",
-  "address": "Fraser Cove Shopping Centre, 229-233 Fraser Street, Fraser Cove Click and Collect, 3112",
-  "lat": -37.7141,
-  "lon": 176.1513
- },
- {
-  "id": "2768257",
-  "name": "Woolworths Gisborne",
-  "address": "Carnarvon Street, Gladstone Road, Gisborne Click and Collect, 4010",
-  "lat": -38.6619,
-  "lon": 178.0182
- },
- {
-  "id": "1190273",
-  "name": "Woolworths Glenfield",
-  "address": "Cnr Bentley Ave & Glenfield Rd, Glenfield, Glenfield Click and Collect, 0629",
-  "lat": -36.7818,
-  "lon": 174.7229
- },
- {
-  "id": "2810884",
-  "name": "Woolworths Gore",
-  "address": "24 Medway Street, East Gore, Gore Click and Collect, 9710",
-  "lat": -46.0985,
-  "lon": 168.9441
- },
- {
-  "id": "577581",
-  "name": "Woolworths Greenlane",
-  "address": "326 Great South Road, Greenlane, Greenlane Click and Collect, 1051, Auckland GN",
-  "lat": -36.8893,
-  "lon": 174.7937
- },
- {
-  "id": "3105636",
-  "name": "Woolworths Greville Road",
-  "address": "Greville Road, Greville Rd Click and Collect",
-  "lat": -36.7309,
-  "lon": 174.7222
- },
- {
-  "id": "1906063",
-  "name": "Woolworths Grey Lynn",
-  "address": "271 Richmond Road, Grey Lynn, Grey Lynn Click & Collect, Grey Lynn Click and Collect",
-  "lat": -36.8546,
-  "lon": 174.7318
- },
- {
-  "id": "764300",
-  "name": "Woolworths Greymouth",
-  "address": "174 Mawhera Quay, Greymouth Click & Collect, 7805, Greymouth",
-  "lat": -42.4487,
-  "lon": 171.2141
- },
- {
-  "id": "2673966",
-  "name": "Woolworths Hamilton",
-  "address": "Cnr Anglesea & Liverpool Streets, Hamilton Click and Collect, 3204",
-  "lat": -37.7813,
-  "lon": 175.2734
- },
- {
-  "id": "2942598",
-  "name": "Woolworths Hastings Central",
-  "address": "301 Queen Street West, Hastings Cnt Click and Collect, 4122",
-  "lat": -39.6388,
-  "lon": 176.8421
- },
- {
-  "id": "951739",
-  "name": "Woolworths Hawera",
-  "address": "Cnr Union & Nelson Streets, Hawera, Hawera Click and Collect, 4610",
-  "lat": -39.5874,
-  "lon": 174.2823
- },
- {
-  "id": "870058",
-  "name": "Woolworths Helensville",
-  "address": "43 Commercial Road, Helensville Click and Collect, 0800",
-  "lat": -36.6772,
-  "lon": 174.4506
- },
- {
-  "id": "1230712",
-  "name": "Woolworths Henderson",
-  "address": "West City Mall, Catherine St, Henderson, Henderson Click and Collect, 0612",
-  "lat": -36.8808,
-  "lon": 174.6328
- },
- {
-  "id": "1224920",
-  "name": "Woolworths Highland Park",
-  "address": "507 Pakuranga Highway, Highland Park CC, 2010, Highland Park Click & Collect",
-  "lat": -36.8995,
-  "lon": 174.9082
- },
- {
-  "id": "1223854",
-  "name": "Woolworths Hobsonville",
-  "address": "124 Hobsonville Road, Hobsonville Click Collect, 0618, Hobsonville Click and Collect",
-  "lat": -36.7974,
-  "lon": 174.6474
- },
- {
-  "id": "1352617",
-  "name": "Woolworths Hornby",
-  "address": "Cnr Main Sth Rd & Chappie Place, Hornby Click and Collect",
-  "lat": -43.5428,
-  "lon": 172.527
- },
- {
-  "id": "1237277",
-  "name": "Woolworths Howick",
-  "address": "35 Cook St, Howick Click and Collect, 2014",
-  "lat": -36.8959,
-  "lon": 174.9328
- },
- {
-  "id": "933798",
-  "name": "Woolworths Huntly",
-  "address": "16/18 Tumate Mahuta Dr, Huntly Click and Collect",
-  "lat": -37.5641,
-  "lon": 175.1585
- },
- {
-  "id": "1799246",
-  "name": "Woolworths Invercargill",
-  "address": "172 Tay Street, Invercargill, Invercargill Click and Collect",
-  "lat": -46.4122,
-  "lon": 168.3582
- },
- {
-  "id": "1646608",
-  "name": "Woolworths Johnsonville",
-  "address": "31 Johnsonville Road, Johnsonville Click & Collect, Johnsonville Click and Collect",
-  "lat": -41.2241,
-  "lon": 174.808
- },
- {
-  "id": "311319",
-  "name": "Woolworths Johnsonville Mall",
-  "address": "Moorefield Road, Johnsonville, Moorefield Mall, 6037, Wellington JV",
-  "lat": -41.223,
-  "lon": 174.8051
- },
- {
-  "id": "1225688",
-  "name": "Woolworths Kaiapoi",
-  "address": "87-97 Hilton Street, Kaiapoi Click and Collect, 7630",
-  "lat": -43.3854,
-  "lon": 172.658
- },
- {
-  "id": "1230169",
-  "name": "Woolworths Karori",
-  "address": "Shopping Centre, Main Rd, Karori, Karori Click and Collect, 6147",
-  "lat": -41.2843,
-  "lon": 174.7386
- },
- {
-  "id": "913420",
-  "name": "Woolworths Katikati",
-  "address": "123-131 Main Road, Katikati Click and Collect, 3129",
-  "lat": -37.5597,
-  "lon": 175.9158
- },
- {
-  "id": "1237272",
-  "name": "Woolworths Kelston",
-  "address": "Cnr Great North Rd & West Coast Rd, Kelston Click and Collect, 0602",
-  "lat": -36.9096,
-  "lon": 174.6635
- },
- {
-  "id": "1093410",
-  "name": "Woolworths Kelvin Grove",
-  "address": "7 Fernlea Ave, Kelvin Grove, Kelvin Grove Click and Collect",
-  "lat": -40.3301,
-  "lon": 175.6534
- },
- {
-  "id": "2673967",
-  "name": "Woolworths Kerikeri",
-  "address": "Cnr Butler & Kerikeri Rds, Kerikeri Click and Collect, 0230",
-  "lat": -35.2291,
-  "lon": 173.9459
- },
- {
-  "id": "2810998",
-  "name": "Woolworths Kilbirnie",
-  "address": "47 Bay Road, Kilbirnie, Kilbirnie Click and Collect, 6022",
-  "lat": -41.3195,
-  "lon": 174.7946
- },
- {
-  "id": "2770183",
-  "name": "Woolworths Levin",
-  "address": "Cnr Bristol &, Stanley Street, Levin Click and Collect, 5510",
-  "lat": -40.6203,
-  "lon": 175.2868
- },
- {
-  "id": "620844",
-  "name": "Woolworths Lincoln Road",
-  "address": "185 - 187 Universal Drive, Lincoln Road Click and Collect, 0610, Auckland LN",
-  "lat": -36.8569,
-  "lon": 174.6314
- },
- {
-  "id": "2749937",
-  "name": "Woolworths Lower Hutt",
-  "address": "261 High Street, Hutt Central, Lower Hutt Click and Collect, 5010",
-  "lat": -41.2074,
-  "lon": 174.9059
- },
- {
-  "id": "1225554",
-  "name": "Woolworths Lynfield",
-  "address": "570 Hillsborough Road, Lynfield Click and Collect, 1041",
-  "lat": -36.9256,
-  "lon": 174.7231
- },
- {
-  "id": "1225559",
-  "name": "Woolworths Lynnmall",
-  "address": "Lynnmall Shopping Centre, Great North Road, Lynnmall Click and Collect, 0600",
-  "lat": -36.9073,
-  "lon": 174.6843
- },
- {
-  "id": "2655603",
-  "name": "Woolworths Mailer Street",
-  "address": "43 Mailer Street, Mailer St Click and Collect",
-  "lat": -45.881,
-  "lon": 170.4796
- },
- {
-  "id": "2373714",
-  "name": "Woolworths Mairangi Bay",
-  "address": "3 Ramsgate Terrace, Mairangi Bay Click and Collect, 0630",
-  "lat": -36.739,
-  "lon": 174.7526
- },
- {
-  "id": "1600626",
-  "name": "Woolworths Mangere East",
-  "address": "359 Massey Road, Mangere East, Auckland, Mangere East Click and Collect",
-  "lat": -36.9667,
-  "lon": 174.8251
- },
- {
-  "id": "1225677",
-  "name": "Woolworths Manukau",
-  "address": "652 Great South Road, Manukau Click and Collect, 2104",
-  "lat": -36.987,
-  "lon": 174.8838
- },
- {
-  "id": "1906072",
-  "name": "Woolworths Manukau Mall",
-  "address": "Shop 99, Manukau City Centre, Manukau Mall Click and Collect, Auckland MK",
-  "lat": -36.9929,
-  "lon": 174.8822
- },
- {
-  "id": "1906083",
-  "name": "Woolworths Manurewa",
-  "address": "227 Browns Road, Manurewa, Manurewa Click and Collect",
-  "lat": -37.0177,
-  "lon": 174.8649
- },
- {
-  "id": "2729838",
-  "name": "Woolworths Masterton",
-  "address": "Cnr Workshop & Queen Street, Masterton Click and Collect, 5810",
-  "lat": -40.9525,
-  "lon": 175.6589
- },
- {
-  "id": "911335",
-  "name": "Woolworths Matamata",
-  "address": "Cnr Arawa & Gouk Streets, Matamata, Matamata Click and Collect, 3400",
-  "lat": -37.8088,
-  "lon": 175.774
- },
- {
-  "id": "1237264",
-  "name": "Woolworths Meadowbank",
-  "address": "35-47 St Johns Rd, Meadowbank Click&Collect, 1072, Meadowbank Click and Collect",
-  "lat": -36.8759,
-  "lon": 174.8276
- },
- {
-  "id": "1906069",
-  "name": "Woolworths Meadowlands",
-  "address": "Cnr Meadowlands Drive & Whitford Road, Howick, Meadowlands Click and Collect",
-  "lat": -36.9135,
-  "lon": 174.929
- },
- {
-  "id": "473644",
-  "name": "Woolworths Milford",
-  "address": "143 Kitchener Road, Milford Click and Collect",
-  "lat": -36.772,
-  "lon": 174.7661
- },
- {
-  "id": "1229208",
-  "name": "Woolworths Moorhouse Ave",
-  "address": "347 Moorhouse Ave, Christchurch, Moorhouse Click and Collect, 8011",
-  "lat": -43.5387,
-  "lon": 172.6417
- },
- {
-  "id": "1244356",
-  "name": "Woolworths Morrinsville",
-  "address": "66 Studholme Street, Morrinsville Pick up, 3300",
-  "lat": -37.6569,
-  "lon": 175.5276
- },
- {
-  "id": "2791816",
-  "name": "Woolworths Mosgiel",
-  "address": "55 Gordon Road, Fairfield, Mosgiel Click and Collect, 9024",
-  "lat": -45.8806,
-  "lon": 170.3519
- },
- {
-  "id": "767216",
-  "name": "Woolworths Motueka",
-  "address": "High Street, Motueka, Motueka Click and Collect",
-  "lat": -41.1097,
-  "lon": 173.011
- },
- {
-  "id": "1906076",
-  "name": "Woolworths Mt Eden",
-  "address": "Cnr Valley & Dominion Roads, Mt Eden, Mt Eden Click & Collect, Mt Eden Click and Collect",
-  "lat": -36.8773,
-  "lon": 174.7516
- },
- {
-  "id": "1906079",
-  "name": "Woolworths Mt Roskill",
-  "address": "112 Stoddard Rd, Mt Roskill, Mt Roskill Click and Collect",
-  "lat": -36.9042,
-  "lon": 174.727
- },
- {
-  "id": "1239981",
-  "name": "Woolworths Mt Wellington",
-  "address": "Cnr Penrose Rd & Mt Wellington Highway, Mt Wgtn Click&Collect, Mt Wellington Click and Collec",
-  "lat": -36.9094,
-  "lon": 174.8372
- },
- {
-  "id": "2442758",
-  "name": "Woolworths Napier",
-  "address": "Cnr Munroe & Dickens Streets, Napier Click and Collect, 4100",
-  "lat": -39.4928,
-  "lon": 176.9138
- },
- {
-  "id": "1225552",
-  "name": "Woolworths Nelson",
-  "address": "35 St Vincent Street, Nelson Click and Collect, 7010",
-  "lat": -41.2727,
-  "lon": 173.2773
- },
- {
-  "id": "4166071",
-  "name": "Woolworths Nelson Junction",
-  "address": "33 Cadillac Way, Annesbrook, Nelson Junction Pickup, 7011",
-  "lat": -41.2977069,
-  "lon": 173.241518
- },
- {
-  "id": "2621512",
-  "name": "Woolworths New Brighton",
-  "address": "12 Hawke Street, New Brighton Click and Collect, 8061",
-  "lat": -43.5067,
-  "lon": 172.7298
- },
- {
-  "id": "840286",
-  "name": "Woolworths New Plymouth Central",
-  "address": "Cnr of Cameron & Leach Streets, New Plymouth Click and Collect",
-  "lat": -39.0564,
-  "lon": 174.0823
- },
- {
-  "id": "1768531",
-  "name": "Woolworths Newmarket",
-  "address": "277 Broadway, Newmarket, Newmarket Click and Collect",
-  "lat": -36.8719,
-  "lon": 174.7763
- },
- {
-  "id": "2449151",
-  "name": "Woolworths Newtown",
-  "address": "3 John Street, Newtown Click and Collect, 6021",
-  "lat": -41.3075,
-  "lon": 174.7771
- },
- {
-  "id": "2124747",
-  "name": "Woolworths Northcote",
-  "address": "Pearn Crescent, Northcote Auckland, Northcote Click and Collect",
-  "lat": -36.8003,
-  "lon": 174.7448
- },
- {
-  "id": "1225718",
-  "name": "Woolworths Northlands",
-  "address": "cnr Main North & Sawyers Arms Roads, Northlands Click and Collect, 8051",
-  "lat": -43.4917,
-  "lon": 172.6116
- },
- {
-  "id": "1230704",
-  "name": "Woolworths Northwest",
-  "address": "7 Fred Taylor Drive, Northwest Town Centre, Massy, OLDNorthwest Click and Collect, 0614, Northwest Click and Collect",
-  "lat": -36.8197,
-  "lon": 174.6113
- },
- {
-  "id": "1203129",
-  "name": "Woolworths Oamaru",
-  "address": "116/108 Thames St, Oamaru Click Collect, 9400",
-  "lat": -45.0971,
-  "lon": 170.9704
- },
- {
-  "id": "1225560",
-  "name": "Woolworths Onehunga",
-  "address": "cnr Church & Selwyn Streets, Onehunga Click and Collect, 1061",
-  "lat": -36.9231,
-  "lon": 174.7832
- },
- {
-  "id": "1225662",
-  "name": "Woolworths Orewa",
-  "address": "Moenui Avenue, Orewa Click and Collect, 0931",
-  "lat": -36.5883,
-  "lon": 174.6961
- },
- {
-  "id": "943327",
-  "name": "Woolworths Otaki",
-  "address": "Cnr Mill Road & Aotaki Street, Otaki Click and Collect, 5512",
-  "lat": null,
-  "lon": null
- },
- {
-  "id": "2359781",
-  "name": "Woolworths Otorohanga",
-  "address": "119-123 Maniapoto Street, Otorohanga Click and Collect, 3900",
-  "lat": -38.19,
-  "lon": 175.2099
- },
- {
-  "id": "1475732",
-  "name": "Woolworths Paeroa",
-  "address": "Paeroa, Paeroa Click and Collect",
-  "lat": -37.3784,
-  "lon": 175.6681
- },
- {
-  "id": "733204",
-  "name": "Woolworths Paihia Central",
-  "address": "6 Williams Road, Paihia, Paihia Central Click-Collect, Paihia Central",
-  "lat": null,
-  "lon": null
- },
- {
-  "id": "1488544",
-  "name": "Woolworths Pakuranga",
-  "address": "Pakuranga Town Centre, Pakuranga, Pakuranga Click and Collect",
-  "lat": -36.913,
-  "lon": 174.8686
- },
- {
-  "id": "2686683",
-  "name": "Woolworths Palmerston North",
-  "address": "Cnr Ferguson & Ashley Street, Palmerston N Click and Collect, 4410",
-  "lat": -40.3578,
-  "lon": 175.615
- },
- {
-  "id": "1224936",
-  "name": "Woolworths Papakura",
-  "address": "2 Averill Street, Papakura Click and Collect, 2110",
-  "lat": -37.0636,
-  "lon": 174.9442
- },
- {
-  "id": "1478443",
-  "name": "Woolworths Papamoa",
-  "address": "Papamoa Shopping Centre, Domain Road, Royal Palm Beach, Papamoa Click and Collect, 3118",
-  "lat": -37.699,
-  "lon": 176.2838
- },
- {
-  "id": "1225052",
-  "name": "Woolworths Papatoetoe",
-  "address": "Hunters Plaza, 217 Great South Road, Papatoetoe Click and Collect, 2025",
-  "lat": -36.971,
-  "lon": 174.8605
- },
- {
-  "id": "1123870",
-  "name": "Woolworths Paraparaumu",
-  "address": "Coastlands Shopping Centre, Paraparaumu, Paraparaumu Click Collect, 5032, Paraparaumu Click and Collect",
-  "lat": -40.9174,
-  "lon": 175.0055
- },
- {
-  "id": "1228590",
-  "name": "Woolworths Petone",
-  "address": "45 Jackson St, Petone, Petone Click and Collect, 5012",
-  "lat": -41.2229,
-  "lon": 174.8722
- },
- {
-  "id": "2563753",
-  "name": "Woolworths Pokeno",
-  "address": "Pokeno, Pokeno Click and Collect, 2402",
-  "lat": -37.2453,
-  "lon": 175.0225
- },
- {
-  "id": "1996677",
-  "name": "Woolworths Ponsonby",
-  "address": "4 Williamson Avenue, Ponsonby, Ponsonby Click and Collect",
-  "lat": -36.8585,
-  "lon": 174.7489
- },
- {
-  "id": "350711",
-  "name": "Woolworths Porirua",
-  "address": "Cnr Parumoana St & Lyttleton Ave, Porirua Click and Collect, 5022, Wellington PR",
-  "lat": -41.1339,
-  "lon": 174.8413
- },
- {
-  "id": "882224",
-  "name": "Woolworths Pt Chevalier",
-  "address": "13 Point Chevalier Road, Point Chevalier, Pt Chevalier Click & Collect, Auckland PtC",
-  "lat": -36.8698,
-  "lon": 174.7102
- },
- {
-  "id": "2686431",
-  "name": "Woolworths Pukekohe",
-  "address": "Cnr Tobin & Seddon Lane, Pukekohe Click and Collect, 2120",
-  "lat": -37.1996,
-  "lon": 174.9022
- },
- {
-  "id": "1213289",
-  "name": "Woolworths Pukekohe South",
-  "address": "186 - 192 Manukau Rd, Pukekohe, Pukekohe Sth ClC, 2120, Pukekohe Sth Click and Collect",
-  "lat": -37.2106,
-  "lon": 174.9113
- },
- {
-  "id": "946342",
-  "name": "Woolworths Putaruru",
-  "address": "Tirau Street, Putaruru Click and Collect, 3411",
-  "lat": -38.0473,
-  "lon": 175.7806
- },
- {
-  "id": "1226949",
-  "name": "Woolworths Queensgate",
-  "address": "35 Bloomfield Terrace, Queensgate, Queensgate Click and Collect, 5010",
-  "lat": -41.2104,
-  "lon": 174.908
- },
- {
-  "id": "2811065",
-  "name": "Woolworths Queenstown",
-  "address": "30 Grant Road, Frankton, Queenstown Click and Collect, 9371",
-  "lat": -45.0136,
-  "lon": 168.7418
- },
- {
-  "id": "2811341",
-  "name": "Woolworths Rangiora East",
-  "address": "40-54 Ivory Street, Rangiora, Rangiora East ClickandCollect, 7400, Rangiora Est Click and Collect",
-  "lat": -43.3074,
-  "lon": 172.5989
- },
- {
-  "id": "1230175",
-  "name": "Woolworths Rangitikei Street",
-  "address": "Cnr Rangitikei & Featherstone sts, Rangitikei Click and Collect, 4412",
-  "lat": -40.3503,
-  "lon": 175.6065
- },
- {
-  "id": "2811032",
-  "name": "Woolworths Redwoodtown",
-  "address": "Cnr Weld St and, Alabama Road, Redwoodtown Click and Collect, 7201",
-  "lat": -41.5297,
-  "lon": 173.9552
- },
- {
-  "id": "727699",
-  "name": "Woolworths Regent",
-  "address": "11 Kamo Road, Regent, Regent Click & Collect, Whangarei RG",
-  "lat": -35.7146,
-  "lon": 174.3227
- },
- {
-  "id": "2723227",
-  "name": "Woolworths Richmond",
-  "address": "Cnr Champion Rd and Salisbury Rd, Richmond, Richmond Click and Collect, 7020",
-  "lat": -41.3342,
-  "lon": 173.2018
- },
- {
-  "id": "2741638",
-  "name": "Woolworths Rolleston",
-  "address": "Cnr McCauley Street & Rolleston Drive, Rolleston, Rolleston Click and Collect",
-  "lat": -43.594,
-  "lon": 172.3861
- },
- {
-  "id": "2313141",
-  "name": "Woolworths Roselands",
-  "address": "Roselands Mall, cnr Great South and Subway Roads, Roselands Click and Collect",
-  "lat": -37.0589,
-  "lon": 174.9412
- },
- {
-  "id": "2768262",
-  "name": "Woolworths Rotorua",
-  "address": "246 Fenton Street, Victoria, Rotorua Click and Collect, 3010",
-  "lat": -38.1427,
-  "lon": 176.254
- },
- {
-  "id": "1878751",
-  "name": "Woolworths Rototuna",
-  "address": "3 Fergy Place, Rototuna North, Rototuna Click and Collect",
-  "lat": -37.7232,
-  "lon": 175.2595
- },
- {
-  "id": "2673963",
-  "name": "Woolworths Silverdale",
-  "address": "40 Hibiscus Coast Highway, Silverdale Click and Collect, 0932",
-  "lat": -36.6139,
-  "lon": 174.6807
- },
- {
-  "id": "1235353",
-  "name": "Woolworths Spotswood",
-  "address": "Cnr Manadon St & South Rd, Spotswood Click and Collect, 4310",
-  "lat": -39.0759,
-  "lon": 174.0339
- },
- {
-  "id": "2367143",
-  "name": "Woolworths Springlands",
-  "address": "133 Middle Renwick Road, Springlands Click and Collect, 7201",
-  "lat": -41.5092,
-  "lon": 173.9351
- },
- {
-  "id": "1225694",
-  "name": "Woolworths St James",
-  "address": "Cnr Hukunui & Thomas Rds, Rototuna, St James Click and Collect, 3210",
-  "lat": -37.7322,
-  "lon": 175.2732
- },
- {
-  "id": "1906087",
-  "name": "Woolworths St Johns",
-  "address": "134 - 144 Felton Mathew Avenue, St Johns, St Johns Click and Collect",
-  "lat": -36.8794,
-  "lon": 174.852
- },
- {
-  "id": "1225566",
-  "name": "Woolworths St Lukes",
-  "address": "St Luke Shopping Centre, cnr St Lukes Road & Morningside Drive, St Lukes Click and Collect, 1025",
-  "lat": -36.8838,
-  "lon": 174.7342
- },
- {
-  "id": "2367135",
-  "name": "Woolworths Stoke",
-  "address": "Cnr Putaitai Street, Stoke Click and Collect, 7011",
-  "lat": -41.3117,
-  "lon": 173.2338
- },
- {
-  "id": "855866",
-  "name": "Woolworths Stratford",
-  "address": "21A - 27 Broadway, State Highway 3, Stratford Click and Collect, 4332",
-  "lat": -39.3272,
-  "lon": 174.2795
- },
- {
-  "id": "1231998",
-  "name": "Woolworths Sunnynook",
-  "address": "Cnr Sycamore Dr & Sunnynook Rd, Sunnynook Click and Collect, 0620",
-  "lat": -36.759,
-  "lon": 174.7408
- },
- {
-  "id": "480066",
-  "name": "Woolworths Takanini",
-  "address": "228 Great South Rd, Takanini Click & Collect, Auckland TKN",
-  "lat": -37.0476,
-  "lon": 174.9271
- },
- {
-  "id": "1229219",
-  "name": "Woolworths Takapuna",
-  "address": "Barry's Point Rd, Takapuna Click and Collect, 0622",
-  "lat": -36.7913,
-  "lon": 174.7655
- },
- {
-  "id": "4141080",
-  "name": "Woolworths Taupo Central",
-  "address": "Cnr Spa Rd And Tongariro St, Taupo Central Pick Up, 3330",
-  "lat": -38.6826,
-  "lon": 176.0713
- },
- {
-  "id": "3456126",
-  "name": "Woolworths Taupo South",
-  "address": "Kokomea Village Centre Lake Terrace, Taupo South Pickup",
-  "lat": -38.722,
-  "lon": 176.0793
- },
- {
-  "id": "2682132",
-  "name": "Woolworths Tauranga",
-  "address": "618 Cameron Road, Tauranga Click and Collect, 3112",
-  "lat": -37.7004,
-  "lon": 176.1577
- },
- {
-  "id": "565356",
-  "name": "Woolworths Tawa",
-  "address": "3 Main Road, Tawa Click and Collect, 5028, Wellington TW",
-  "lat": -41.1865,
-  "lon": 174.8308
- },
- {
-  "id": "2373720",
-  "name": "Woolworths Te Aroha",
-  "address": "85 Whitaker Street, Te Aroha Click and Collect, 3320",
-  "lat": -37.545,
-  "lon": 175.7139
- },
- {
-  "id": "1232007",
-  "name": "Woolworths Te Atatu South",
-  "address": "Cnr Edmonton & Te Atatu Rds, Te Atatu South, Te Atatu Sth Click and Collect, 0610",
-  "lat": -36.8657,
-  "lon": 174.6463
- },
- {
-  "id": "2791362",
-  "name": "Woolworths Te Awamutu",
-  "address": "180 Sloane Street, Te Awamutu Click and Collect, 3800",
-  "lat": -38.0118,
-  "lon": 175.3259
- },
- {
-  "id": "913417",
-  "name": "Woolworths Te Puke",
-  "address": "Queen St & Boucher Ave, Te Puke Click and Collect, 3119",
-  "lat": -37.7846,
-  "lon": 176.3251
- },
- {
-  "id": "1101675",
-  "name": "Woolworths Te Rapa",
-  "address": "8 Eagle Way, Te Rapa, Te Rapa Click and Collect",
-  "lat": -37.7464,
-  "lon": 175.2343
- },
- {
-  "id": "1233474",
-  "name": "Woolworths The Palms",
-  "address": "Marshlands Rd, The Palms Click and Collect, 8061",
-  "lat": -43.5054,
-  "lon": 172.6643
- },
- {
-  "id": "2727190",
-  "name": "Woolworths The Valley",
-  "address": "1 Vickers Road, Waiwhakaiho, The Valley Click and Collect, 4312",
-  "lat": -39.0475,
-  "lon": 174.115
- },
- {
-  "id": "1740953",
-  "name": "Woolworths Three Kings",
-  "address": "532 Mount Albert Road, Three Kings Click and Collect, 1042",
-  "lat": -36.9093,
-  "lon": 174.7551
- },
- {
-  "id": "1225046",
-  "name": "Woolworths Tikipunga",
-  "address": "cnr Paramount Parade & Wanaka Street, Tikipunga Click and Collect, 0112",
-  "lat": -35.6832,
-  "lon": 174.321
- },
- {
-  "id": "2791733",
-  "name": "Woolworths Timaru",
-  "address": "9 Browne Street, Parkside, Timaru Click and Collect, 7910",
-  "lat": -44.4026,
-  "lon": 171.2539
- },
- {
-  "id": "3605672",
-  "name": "Woolworths Timaru North",
-  "address": "233 Evans Street, SH1, Timaru North Click and Collect, 7910",
-  "lat": -44.3718,
-  "lon": 171.2423
- },
- {
-  "id": "942745",
-  "name": "Woolworths Tokoroa",
-  "address": "12 - 20 O'Sullivan Drive, Tokoroa, Tokoroa Click and Collect, 3420",
-  "lat": -38.222,
-  "lon": 175.8737
- },
- {
-  "id": "2810937",
-  "name": "Woolworths Trafalgar Park",
-  "address": "Cnr Paruparu Rd &, Halifax Street, Nelson, TrafalgarPark ClickandCollect, 7010, TrafalgarPrk Click and Collect",
-  "lat": -41.2702,
-  "lon": 173.2815
- },
- {
-  "id": "1223959",
-  "name": "Woolworths Upper Hutt",
-  "address": "13-19 Queen Street, Upper Hutt, Upper Hutt Click and Collect, 5372",
-  "lat": -41.1227,
-  "lon": 175.071
- },
- {
-  "id": "2373711",
-  "name": "Woolworths Victoria Ave",
-  "address": "433 Victoria Avenue, Victoria Ave Click and Collect, 4500",
-  "lat": -39.925,
-  "lon": 175.0381
- },
- {
-  "id": "1600666",
-  "name": "Woolworths Vogeltown",
-  "address": "30 Hori Street, New Plymouth, Vogeltown Click and Collect",
-  "lat": -39.0776,
-  "lon": 174.0829
- },
- {
-  "id": "3059814",
-  "name": "Woolworths Waiata Shores",
-  "address": "2 Periko Way, Waiata Shore Click and Collect, 2112",
-  "lat": -37.036,
-  "lon": 174.9057
- },
- {
-  "id": "4156860",
-  "name": "Woolworths Waiheke",
-  "address": "13/19 Belgium Street, Ostend, CD Waiheke Click and Collect, 1081, Waiheke Click and Collect",
-  "lat": -36.795,
-  "lon": 175.0459
- },
- {
-  "id": "2373716",
-  "name": "Woolworths Waikanae",
-  "address": "Ngaio Road, Waikanae Click and Collect, 5391",
-  "lat": -40.8763,
-  "lon": 175.0652
- },
- {
-  "id": "1488549",
-  "name": "Woolworths Waikiwi",
-  "address": "Cnr North Road & Durham Street, Waikiwi, Waikiwi Click and Collect",
-  "lat": -46.3751,
-  "lon": 168.3471
- },
- {
-  "id": "3838267",
-  "name": "Woolworths Waimakariri Junction",
-  "address": "6 Hakarau Road, Waimak Junction, Waimak Click and Collect",
-  "lat": -43.3766,
-  "lon": 172.6481
- },
- {
-  "id": "1230110",
-  "name": "Woolworths Wainuiomata",
-  "address": "18 The Strand, Wainuiomata, Wainui Click and Collect, 5373, Wainuiomata Click and Collect",
-  "lat": -41.2607,
-  "lon": 174.9437
- },
- {
-  "id": "951715",
-  "name": "Woolworths Waipukurau",
-  "address": "Ruataniwha Street, Waipukurau Click and Collect, 4210",
-  "lat": -39.9954,
-  "lon": 176.5576
- },
- {
-  "id": "1488276",
-  "name": "Woolworths Waitangi",
-  "address": "9 Blackbridge Road, Paihia, Waitangi Click and Collect",
-  "lat": -35.2792,
-  "lon": 174.0813
- },
- {
-  "id": "1716255",
-  "name": "Woolworths Warkworth",
-  "address": "20-24 Neville Street, Warkworth, Warkworth Click and Collect",
-  "lat": -36.3995,
-  "lon": 174.6643
- },
- {
-  "id": "592572",
-  "name": "Woolworths Westgate",
-  "address": "Westgate Shopping Centre, Cnr Westgate & Fern Hill Drive Massey North, Westgate Click & Collect, 0614, Auckland WG",
-  "lat": -36.8209,
-  "lon": 174.6141
- },
- {
-  "id": "2768276",
-  "name": "Woolworths Whakatane",
-  "address": "105/125 Commerce Street, Whakatane Click and Collect, 3120",
-  "lat": -37.9561,
-  "lon": 176.9949
- },
- {
-  "id": "2770231",
-  "name": "Woolworths Whanganui",
-  "address": "Cnr Taupo Quay &, Wilson Street, Wanganui Click and Collect, 4500",
-  "lat": -39.9358,
-  "lon": 175.0532
- },
- {
-  "id": "1248095",
-  "name": "Woolworths Whangaparaoa",
-  "address": "Cnr Whangaparaoa Rd & Wade Dr, Whangaparaoa Click and Collect, 0943",
-  "lat": -36.6365,
-  "lon": 174.7466
- },
- {
-  "id": "2686464",
-  "name": "Woolworths Whangarei",
-  "address": "Whangarei Retail Centre, Okara DriveCountdown Whangarei, Whangarei Click and Collect, 0110",
-  "lat": -35.7308,
-  "lon": 174.3273
- },
- {
-  "id": "2791350",
-  "name": "Woolworths Whitianga",
-  "address": "24 Joan Gaskell Drive, Whitianga Click and Collect, 3510",
-  "lat": -36.8337,
-  "lon": 175.6944
  }
 ]

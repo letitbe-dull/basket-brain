@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 import logging
 from datetime import timedelta
+from pathlib import Path
 
 import voluptuous as vol
 from homeassistant.components.hassio import AddonError
@@ -18,7 +20,7 @@ from homeassistant.util import dt as dt_util
 
 from .addon import async_ensure_addon_running
 from .cart_builder import CartBuilder
-from .const import ALL_CHAINS, DOMAIN
+from .const import ALL_CHAINS, CONF_WOOLWORTHS_STORE_ID, DOMAIN
 from .coordinator import BasketBrainConfigEntry, BasketBrainCoordinator
 from .foodstuffs import FoodstuffsCookieExpiredError
 from .frontend import async_register_card
@@ -103,6 +105,36 @@ def _staged_items(
             out_of_stock.append(row)
 
     return items, out_of_stock
+
+
+def _load_woolworths_legacy_ids() -> dict[str, str]:
+    """Old REST pickup addressId → GraphQL location id (blocking; run in executor).
+
+    @returns mapping for the ids that changed
+    """
+    path = Path(__file__).parent / "stores" / "woolworths_legacy.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+async def async_migrate_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry) -> bool:
+    """Migrate config entries to the current version.
+
+    @param hass: Home Assistant
+    @param entry: entry to migrate
+    @returns True when the entry is usable
+    """
+    if entry.version > 1:
+        return False
+    data = {**entry.data}
+    if entry.minor_version < 3 and (old_id := data.get(CONF_WOOLWORTHS_STORE_ID)):
+        legacy = await hass.async_add_executor_job(_load_woolworths_legacy_ids)
+        if str(old_id) in legacy:
+            data[CONF_WOOLWORTHS_STORE_ID] = legacy[str(old_id)]
+            _LOGGER.info(
+                "Woolworths store id %s migrated to %s", old_id, data[CONF_WOOLWORTHS_STORE_ID]
+            )
+    hass.config_entries.async_update_entry(entry, data=data, version=1, minor_version=3)
+    return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry) -> bool:

@@ -1,7 +1,7 @@
 {
   "domain": "basket_brain",
   "name": "Basket Brain",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "documentation": "https://github.com/letitbe-dull/basket-brain",
   "issue_tracker": "https://github.com/letitbe-dull/basket-brain/issues",
   "codeowners": ["@letitbe-dull"],

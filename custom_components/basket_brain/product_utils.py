@@ -23,6 +23,9 @@ _SIZE_RE = re.compile(
 # "each" / "ea" standing alone (no leading number).
 _EACH_RE = re.compile(r"\beach\b|\bea\b", re.IGNORECASE)
 
+# Woolworths selling rules on loose produce ("Min Order 250g"), not pack sizes.
+_MIN_ORDER_RE = re.compile(r"\bmin(?:imum)?\.?\s+order\s+\d+(?:\.\d+)?\s*(?:g|kg)\b", re.IGNORECASE)
+
 
 def parse_size(text: str) -> tuple[float, str] | None:
     """Parse a size token from *text*, returning a (value, base_unit) pair.
@@ -38,6 +41,7 @@ def parse_size(text: str) -> tuple[float, str] | None:
         parse_size("Free-Range Eggs 6pk")      → (6.0, "each")
         parse_size("Single Avocado each")      → (1.0, "each")
     """
+    text = _MIN_ORDER_RE.sub(" ", text)
     for m in _SIZE_RE.finditer(text):
         value = float(m.group(1))
         unit = m.group(2).lower()
