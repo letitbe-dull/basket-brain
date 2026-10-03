@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 import secrets
 
 from aiohasupervisor import SupervisorError
@@ -17,6 +18,7 @@ from homeassistant.components.hassio import (
 from homeassistant.components.hassio.handler import get_supervisor_client
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
+from homeassistant.helpers.hassio import is_hassio
 from homeassistant.helpers.singleton import singleton
 
 from .const import (
@@ -33,6 +35,25 @@ _LOGGER = logging.getLogger(__name__)
 
 DATA_ADDON_MANAGER = f"{DOMAIN}_addon_manager"
 DATA_ADDON_SLUG = f"{DOMAIN}_addon_slug"
+
+
+def _dev_addon() -> tuple[str, str] | None:
+    """Return a hand-run login server's URL and token from env vars, if set.
+
+    @returns: (base_url, token) when BB_ADDON_URL and BB_ADDON_TOKEN are set, else None.
+    """
+    url = os.environ.get("BB_ADDON_URL")
+    token = os.environ.get("BB_ADDON_TOKEN")
+    return (url.rstrip("/"), token) if url and token else None
+
+
+def addon_available(hass: HomeAssistant) -> bool:
+    """Return whether a login server can be reached: Supervisor or dev env vars.
+
+    @param hass: Home Assistant instance.
+    @returns: True when the Supervisor or a dev login server is available.
+    """
+    return is_hassio(hass) or _dev_addon() is not None
 
 
 def _is_login_addon(slug: str) -> bool:
@@ -113,6 +134,11 @@ async def async_ensure_addon_running(hass: HomeAssistant) -> tuple[str, str]:
     brought up — callers translate that into ConfigEntryNotReady or a
     config-flow error.
     """
+    if (dev := _dev_addon()) is not None:
+        _LOGGER.warning("Using dev login server at %s (BB_ADDON_URL)", dev[0])
+        await _async_wait_until_ready(hass, dev[0])
+        return dev
+
     slug = await async_resolve_addon_slug(hass)
     manager = get_addon_manager(hass)
     manager.addon_slug = slug

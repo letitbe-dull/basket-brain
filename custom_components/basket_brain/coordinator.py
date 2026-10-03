@@ -641,9 +641,17 @@ class BasketBrainCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                 if chain_ids.get(CHAIN_WOOLWORTHS)
             ]
             if ww_items:
-                by_id = await self.woolworths.get_prices(
-                    [res["product_id"] for _, res in ww_items]
-                )
+                try:
+                    by_id = await self.woolworths.get_prices(
+                        [res["product_id"] for _, res in ww_items]
+                    )
+                except CookieExpiredError:
+                    raise
+                except Exception as err:  # noqa: BLE001
+                    # A network blip is not a dead session: no prices this
+                    # tick, no re-login.
+                    _LOGGER.debug("Woolworths price fetch failed: %s", err)
+                    by_id = {}
                 for phrase, resolution in ww_items:
                     product_id = resolution["product_id"]
                     result = by_id.get(product_id)

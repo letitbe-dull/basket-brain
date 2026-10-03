@@ -8,7 +8,11 @@ from typing import Any
 ME_SCRIPT = """() => fetch("/api/graphql?op-name=Me", {
   method: "POST",
   headers: {"content-type": "application/json"},
-  body: JSON.stringify({operationName: "Me", query: "query Me { me { __typename id } }", variables: {}}),
+  body: JSON.stringify({
+    operationName: "Me",
+    query: "query Me { me { __typename id } }",
+    variables: {},
+  }),
 }).then(r => r.json())"""
 
 

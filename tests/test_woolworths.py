@@ -1,4 +1,4 @@
-"""Woolworths GraphQL client: sign-in check, pricing, search, barcodes, push, history, specials, slots, store."""
+"""Woolworths GraphQL client tests."""
 
 import json
 import logging
@@ -39,7 +39,9 @@ def _mock(responses: dict[str, Any]) -> tuple[respx.Route, list[dict[str, Any]]]
             reply = reply(body)
         if isinstance(reply, Exception):
             raise reply
-        return reply if isinstance(reply, httpx.Response) else httpx.Response(200, json=reply)
+        if isinstance(reply, httpx.Response):
+            return reply
+        return httpx.Response(200, json=reply)
 
     return respx.post(url__regex=GRAPHQL).mock(side_effect=handler), seen
 
@@ -48,7 +50,9 @@ def _ops(seen: list[dict[str, Any]]) -> list[str]:
     return [b["operationName"] for b in seen]
 
 
-def _variant(key: str, price: float | None = 3.6, status: str = "IN_STOCK", **extra: Any) -> dict:
+def _variant(
+    key: str, price: float | None = 3.6, status: str = "IN_STOCK", **extra: Any
+) -> dict:
     return {
         "key": key,
         "availabilityStatus": status,
@@ -84,9 +88,8 @@ async def test_check_authed_passes_for_signed_in_jar() -> None:
         {"data": None},
         {"data": {"me": None}},
         {"errors": [{"message": "no", "extensions": {"code": "BANNED_OPERATION"}}]},
-        httpx.ConnectError("boom"),
     ],
-    ids=["guest", "data-null", "me-null", "banned", "transport"],
+    ids=["guest", "data-null", "me-null", "banned"],
 )
 @respx.mock
 async def test_check_authed_raises_when_not_signed_in(reply: Any) -> None:
@@ -96,7 +99,16 @@ async def test_check_authed_raises_when_not_signed_in(reply: Any) -> None:
 
 
 @respx.mock
-async def test_guest_me_logs_nothing_at_warning_or_above(caplog: pytest.LogCaptureFixture) -> None:
+async def test_transport_error_on_me_is_not_a_dead_session() -> None:
+    _mock({"Me": httpx.ConnectError("boom")})
+    with pytest.raises(httpx.ConnectError):
+        await WoolworthsClient(SIGNED_IN).check_authed()
+
+
+@respx.mock
+async def test_guest_me_logs_nothing_at_warning_or_above(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
     _mock({"Me": ME_GUEST})
     with caplog.at_level(logging.DEBUG), pytest.raises(CookieExpiredError):
         await WoolworthsClient(SIGNED_IN).check_authed()
@@ -104,11 +116,16 @@ async def test_guest_me_logs_nothing_at_warning_or_above(caplog: pytest.LogCaptu
 
 
 @respx.mock
-async def test_graphql_error_logs_operation_and_server_message(caplog: pytest.LogCaptureFixture) -> None:
-    _mock({"ProductSearch": httpx.Response(400, json=_fixture("search-barcode-error.json"))})
+async def test_graphql_error_logs_operation_and_server_message(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    error = httpx.Response(400, json=_fixture("search-barcode-error.json"))
+    _mock({"ProductSearch": error})
     with pytest.raises(GraphQLError):
         await WoolworthsClient(SIGNED_IN).search("milk")
-    warning = next(r.getMessage() for r in caplog.records if r.levelno == logging.WARNING)
+    warning = next(
+        r.getMessage() for r in caplog.records if r.levelno == logging.WARNING
+    )
     assert "ProductSearch" in warning
     assert 'Cannot query field "barcode"' in warning
 
@@ -158,7 +175,8 @@ def test_only_woolworths_cookies_are_kept() -> None:
 
 @respx.mock
 async def test_get_prices_reads_selling_price_in_dollars() -> None:
-    _mock({"Me": ME_OK, "GetProductDetails": _detail("282848", _variant("282848-EA", 3.6))})
+    product = _detail("282848", _variant("282848-EA", 3.6))
+    _mock({"Me": ME_OK, "GetProductDetails": product})
     result = await WoolworthsClient(SIGNED_IN).get_prices(["282848"])
     assert result["282848"]["price"] == 3.6
     assert result["282848"]["in_stock"] is True
@@ -176,16 +194,20 @@ async def test_both_mode_product_priced_from_ea_variant() -> None:
 
 @respx.mock
 async def test_kg_only_product_priced_per_kg() -> None:
-    _mock({"Me": ME_OK, "GetProductDetails": _detail("405838", _variant("405838-KG", 7.99))})
+    product = _detail("405838", _variant("405838-KG", 7.99))
+    _mock({"Me": ME_OK, "GetProductDetails": product})
     result = await WoolworthsClient(SIGNED_IN).get_prices(["405838"])
     assert result["405838"]["price"] == 7.99
     assert result["405838"]["kg_only"] is True
 
 
-@pytest.mark.parametrize("status", ["OUT_OF_STOCK", "OutOfStock", "UNAVAILABLE", "Unavailable"])
+@pytest.mark.parametrize(
+    "status", ["OUT_OF_STOCK", "OutOfStock", "UNAVAILABLE", "Unavailable"]
+)
 @respx.mock
 async def test_out_of_stock_statuses(status: str) -> None:
-    _mock({"Me": ME_OK, "GetProductDetails": _detail("1", _variant("1-EA", 2.0, status))})
+    product = _detail("1", _variant("1-EA", 2.0, status))
+    _mock({"Me": ME_OK, "GetProductDetails": product})
     result = await WoolworthsClient(SIGNED_IN).get_prices(["1"])
     assert result["1"]["in_stock"] is False
 
@@ -207,8 +229,18 @@ async def test_unpriceable_product_is_left_out(reply: dict) -> None:
 
 
 @respx.mock
+async def test_get_prices_skips_detail_only_fields() -> None:
+    _, seen = _mock({"Me": ME_OK, "GetProductDetails": _detail("1", _variant("1-EA"))})
+    await WoolworthsClient(SIGNED_IN).get_prices(["1"])
+    query = next(b["query"] for b in seen if b["operationName"] == "GetProductDetails")
+    assert "category" not in query
+    assert "barcode" not in query
+
+
+@respx.mock
 async def test_signed_out_raises_before_any_price() -> None:
-    _, seen = _mock({"Me": ME_GUEST, "GetProductDetails": _detail("1", _variant("1-EA"))})
+    product = _detail("1", _variant("1-EA"))
+    _, seen = _mock({"Me": ME_GUEST, "GetProductDetails": product})
     with pytest.raises(CookieExpiredError):
         await WoolworthsClient().get_prices(["1"])
     assert "GetProductDetails" not in _ops(seen)
@@ -222,7 +254,8 @@ async def test_search_keeps_only_product_rows() -> None:
     body = _fixture("search-milk.json")
     _mock({"ProductSearch": body})
     hits = await WoolworthsClient(SIGNED_IN).search("milk")
-    expected = [r["sku"] for r in body["data"]["My"]["products"]["results"] if r.get("sku")]
+    results = body["data"]["My"]["products"]["results"]
+    expected = [r["sku"] for r in results if r.get("sku")]
     assert [h["sku"] for h in hits] == expected
     assert hits[0]["name"] == "Anchor Milk Standard Blue 1L"
 
@@ -237,7 +270,8 @@ async def test_search_prices_rows_in_dollars() -> None:
         ]},
     ]}}}}})
     hits = await WoolworthsClient(SIGNED_IN).search("milk")
-    assert [(h["sku"], h["price"], h["was_price"]) for h in hits] == [("282848", 3.6, 4.0)]
+    rows = [(h["sku"], h["price"], h["was_price"]) for h in hits]
+    assert rows == [("282848", 3.6, 4.0)]
 
 
 @respx.mock
@@ -252,14 +286,20 @@ async def test_breadcrumb_from_level_three_category() -> None:
 @respx.mock
 async def test_no_level_three_category_gives_no_breadcrumb() -> None:
     _mock({"GetProductDetails": _detail("1", _variant("1-EA"), category=[
-        {"key": "x", "name": "Promo", "level": 0, "parent": {"key": "PG-0000", "level": 0}},
+        {
+            "key": "x",
+            "name": "Promo",
+            "level": 0,
+            "parent": {"key": "PG-0000", "level": 0},
+        },
     ])})
     assert await WoolworthsClient(SIGNED_IN).get_breadcrumb("1") is None
 
 
 @respx.mock
 async def test_detail_size_from_volume_size() -> None:
-    _mock({"GetProductDetails": _detail("282848", _variant("282848-EA", volumeSize="1L"))})
+    variant = _variant("282848-EA", volumeSize="1L")
+    _mock({"GetProductDetails": _detail("282848", variant)})
     detail = await WoolworthsClient(SIGNED_IN).get_product_detail("282848")
     assert detail["size"] == {"volumeSize": "1L"}
 
@@ -269,7 +309,8 @@ async def test_detail_size_from_volume_size() -> None:
 
 @respx.mock
 async def test_detail_carries_real_barcode() -> None:
-    _mock({"GetProductDetails": _detail("282848", _variant("282848-EA", barcode="94127317"))})
+    variant = _variant("282848-EA", barcode="94127317")
+    _mock({"GetProductDetails": _detail("282848", variant)})
     detail = await WoolworthsClient(SIGNED_IN).get_product_detail("282848")
     assert detail["barcode"] == "94127317"
 
@@ -348,7 +389,8 @@ async def test_push_with_errors_raises_server_message() -> None:
 
 @respx.mock
 async def test_kg_only_push_is_compare_only() -> None:
-    _, seen = _mock({"Me": ME_OK, "GetProductDetails": _detail("405838", _variant("405838-KG"))})
+    product = _detail("405838", _variant("405838-KG"))
+    _, seen = _mock({"Me": ME_OK, "GetProductDetails": product})
     with pytest.raises(NotImplementedError):
         await WoolworthsClient(SIGNED_IN).add_to_cart("405838", 1)
     assert "SetCartLineItemQuantity" not in _ops(seen)
@@ -368,7 +410,10 @@ async def test_signed_out_push_raises_cookie_expired() -> None:
 @respx.mock
 async def test_list_usual_pages_orders_and_ranks_by_order_count() -> None:
     pages = {
-        0: {"data": {"orders": {"totalPages": 2, "results": [{"orderNumber": "A"}, {"orderNumber": "B"}]}}},
+        0: {"data": {"orders": {
+            "totalPages": 2,
+            "results": [{"orderNumber": "A"}, {"orderNumber": "B"}],
+        }}},
         1: {"data": {"orders": {"totalPages": 2, "results": [{"orderNumber": "C"}]}}},
     }
     items = {
@@ -391,7 +436,12 @@ async def test_list_usual_pages_orders_and_ranks_by_order_count() -> None:
 
     assert [u["sku"] for u in usual] == ["222", "111", "333"]
     assert usual[0] == {"sku": "222", "name": "item 222"}
-    assert sorted(b["variables"]["input"]["pageIndex"] for b in seen if b["operationName"] == "Orders") == [0, 1]
+    order_pages = [
+        b["variables"]["input"]["pageIndex"]
+        for b in seen
+        if b["operationName"] == "Orders"
+    ]
+    assert sorted(order_pages) == [0, 1]
 
 
 @respx.mock
@@ -405,7 +455,10 @@ async def test_list_usual_with_no_orders_is_empty() -> None:
 
 def _special_row(sku: str, now: float | None, was: float | None) -> dict:
     return {"sku": sku, "productName": f"Item {sku}", "variants": [
-        {"variantKey": f"{sku}-EA", "variantPrice": {"sellingPrice": now, "wasPrice": was}},
+        {
+            "variantKey": f"{sku}-EA",
+            "variantPrice": {"sellingPrice": now, "wasPrice": was},
+        },
     ]}
 
 
@@ -424,7 +477,11 @@ async def test_specials_keep_only_real_price_drops() -> None:
     specials = await WoolworthsClient(SIGNED_IN).get_specials()
 
     assert specials == [{
-        "barcode": None, "product_id": "1", "name": "Item 1", "now_price": 2.0, "was_price": 3.0,
+        "barcode": None,
+        "product_id": "1",
+        "name": "Item 1",
+        "now_price": 2.0,
+        "was_price": 3.0,
     }]
 
 
@@ -437,10 +494,14 @@ async def test_specials_failure_is_empty() -> None:
 @respx.mock
 async def test_timeslots_are_available_pickup_slots_earliest_first() -> None:
     _, seen = _mock({"Propositions": {"data": {"propositions": {"propositions": [
-        {"name": "Pickup late", "method": "pickup", "available": True, "startTime": "2026-10-02T10:00:00+13:00"},
-        {"name": "Delivery", "method": "delivery", "available": True, "startTime": "2026-10-01T08:00:00+13:00"},
-        {"name": "Pickup gone", "method": "pickup", "available": False, "startTime": "2026-10-01T07:00:00+13:00"},
-        {"name": "Pickup soon", "method": "pickup", "available": True, "startTime": "2026-10-01T09:00:00+13:00"},
+        {"name": "Pickup late", "method": "pickup", "available": True,
+         "startTime": "2026-10-02T10:00:00+13:00"},
+        {"name": "Delivery", "method": "delivery", "available": True,
+         "startTime": "2026-10-01T08:00:00+13:00"},
+        {"name": "Pickup gone", "method": "pickup", "available": False,
+         "startTime": "2026-10-01T07:00:00+13:00"},
+        {"name": "Pickup soon", "method": "pickup", "available": True,
+         "startTime": "2026-10-01T09:00:00+13:00"},
     ]}}}})
     slots = await WoolworthsClient(SIGNED_IN, store_id="9500").get_timeslots()
     assert [s["displayName"] for s in slots] == ["Pickup soon", "Pickup late"]
@@ -464,17 +525,23 @@ async def test_set_store_sets_pickup_mode_at_location() -> None:
     }}}})
     await WoolworthsClient(SIGNED_IN, store_id="9500").set_store()
     assert seen[0]["variables"] == {
-        "setCartShoppingModeInput": {"shoppingMode": "Pickup", "pickupLocationId": "9500"}
+        "setCartShoppingModeInput": {
+            "shoppingMode": "Pickup",
+            "pickupLocationId": "9500",
+        }
     }
 
 
 @respx.mock
-async def test_set_store_warns_when_location_not_applied(caplog: pytest.LogCaptureFixture) -> None:
+async def test_set_store_warns_when_location_not_applied(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
     _mock({"SetCartShoppingMode": {"data": {"setCartShoppingMode": {
         "shoppingMode": {"mode": "Delivery", "pickupLocationId": "9171"},
     }}}})
     await WoolworthsClient(SIGNED_IN, store_id="9500").set_store()
-    assert any("9500" in r.getMessage() for r in caplog.records if r.levelno == logging.WARNING)
+    warnings = [r.getMessage() for r in caplog.records if r.levelno == logging.WARNING]
+    assert any("9500" in m for m in warnings)
 
 
 @respx.mock
@@ -488,12 +555,19 @@ async def test_set_store_rejected_says_to_repick() -> None:
 async def test_fetch_stores_lists_locations() -> None:
     _mock({"SearchLocations": {"data": {"locations": {"locations": [
         {"id": "9500", "name": "Ponsonby Woolworths ", "storeId": "9500",
-         "address": {"lines": {"line1": "7 College Hill"}, "locality": {"suburb": "Ponsonby"}}},
+         "address": {
+             "lines": {"line1": "7 College Hill"},
+             "locality": {"suburb": "Ponsonby"},
+         }},
         {"id": "3873690", "name": "EXPRESS PU Spotswood", "storeId": "",
          "address": {"lines": {"line1": None}, "locality": {"suburb": None}}},
         {"id": "9500", "name": "dup", "storeId": "9500", "address": {}},
     ]}}}})
     assert await fetch_stores() == [
-        {"id": "9500", "name": "Ponsonby Woolworths", "address": "7 College Hill, Ponsonby"},
+        {
+            "id": "9500",
+            "name": "Ponsonby Woolworths",
+            "address": "7 College Hill, Ponsonby",
+        },
         {"id": "3873690", "name": "EXPRESS PU Spotswood", "address": None},
     ]

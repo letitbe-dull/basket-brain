@@ -8,7 +8,7 @@
  },
  {
   "id": "6c73764e-b8e6-4e55-ad37-f6a9d207da1f",
-  "name": "PAK'nSAVE Alderman Dr Hen",
+  "name": "PAK'nSAVE Alderman Dr Henderson",
   "address": "8-18 Alderman Drive, Henderson, Auckland, 0612",
   "lat": -36.87743,
   "lon": 174.63292
@@ -36,7 +36,7 @@
  },
  {
   "id": "d6d39eea-889d-4e20-923c-55cab225cf7f",
-  "name": "PAK'nSAVE Clarence St",
+  "name": "PAK'nSAVE Clarence Street",
   "address": "85 Clarence Street, Hamilton Lake, Hamilton, 3204",
   "lat": -37.795653,
   "lon": 175.282839
@@ -197,7 +197,7 @@
  },
  {
   "id": "48dd98cc-a757-4102-b15d-ea82b4b10571",
-  "name": "PAK'nSAVE Palmerston N",
+  "name": "PAK'nSAVE Palmerston North",
   "address": "327 Ferguson Street, Palmerston North, 4410",
   "lat": -40.359198,
   "lon": 175.611537
@@ -397,5 +397,12 @@
   "address": "104 Walton Street, Whangarei, 0110",
   "lat": -35.725958,
   "lon": 174.32475
+ },
+ {
+  "id": "002b83de-b79d-4228-a787-bd0765b6cb56",
+  "name": "PAKnSAVE Wairau Road",
+  "address": "30 Wairau Road, Wairau Valley, Auckland, 0627",
+  "lat": -36.778705,
+  "lon": 174.744295
  }
 ]

@@ -1,5 +1,5 @@
 name: "Basket Brain Login"
-version: "1.0.1"
+version: "1.0.2"
 slug: "basket_brain_login"
 # Prebuilt per-arch images pushed by .github/workflows/build-addon.yml. The
 # Supervisor fills in {arch} and pulls the tag matching `version` above.

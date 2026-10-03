@@ -1,7 +1,4 @@
-"""Woolworths NZ client over the site's GraphQL endpoint.
-
-Shapes, units and traps: docs/WOOLWORTHS-API-CHANGE.md and docs/woolworths-graphql-probes.md.
-"""
+"""Woolworths NZ client over the site's GraphQL endpoint."""
 
 from __future__ import annotations
 
@@ -55,7 +52,17 @@ _DETAIL = f"""query GetProductDetails($key: String!) {{
   }} }}
 }}"""
 
-_SEARCH = f"""query ProductSearch($searchInput: CompositeSearchInput!) {{
+# Same operation, trimmed to what a price row needs; polled for every basket SKU.
+_PRICE = f"""query GetProductDetails($key: String!) {{
+  My {{ product(key: $key) {{
+    key brand name storeId
+    variants {{ ... on GroceryVariant {{
+      key availabilityStatus purchasingUnits {{ unit }}
+      {_PRICE_FIELDS} }} }}
+  }} }}
+}}"""
+
+_SEARCH =f"""query ProductSearch($searchInput: CompositeSearchInput!) {{
   My {{ products(searchInput: $searchInput) {{ results {{
     __typename
     ... on ProductSummary {{ sku productName brand
@@ -86,7 +93,9 @@ _PROPOSITIONS = """query Propositions($input: PropositionsInput!) {
   propositions(input: $input) { propositions { id name method available startTime } }
 }"""
 
-_SET_SHOPPING_MODE = """mutation SetCartShoppingMode($setCartShoppingModeInput: SetCartShoppingModeInput!) {
+_SET_SHOPPING_MODE = """mutation SetCartShoppingMode(
+  $setCartShoppingModeInput: SetCartShoppingModeInput!
+) {
   setCartShoppingMode(input: $setCartShoppingModeInput) {
     shoppingMode { mode pickupLocationId }
   }
@@ -109,7 +118,10 @@ class GraphQLError(Exception):
 
 
 async def _gql(
-    client: httpx.AsyncClient, op: str, query: str, variables: dict[str, Any] | None = None
+    client: httpx.AsyncClient,
+    op: str,
+    query: str,
+    variables: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """POST one GraphQL operation and return its `data`.
 
@@ -131,8 +143,9 @@ async def _gql(
         body = None
     errors = body.get("errors") if isinstance(body, dict) else None
     if errors:
-        messages = "; ".join(str(e.get("message")) for e in errors if isinstance(e, dict))
-        codes = {(e.get("extensions") or {}).get("code") for e in errors if isinstance(e, dict)}
+        dicts = [e for e in errors if isinstance(e, dict)]
+        messages = "; ".join(str(e.get("message")) for e in dicts)
+        codes = {(e.get("extensions") or {}).get("code") for e in dicts}
         level = logging.DEBUG if "BANNED_OPERATION" in codes else logging.WARNING
         _LOGGER.log(level, "Woolworths %s failed: %s", op, messages)
         raise GraphQLError(f"{op}: {messages}")
@@ -207,7 +220,7 @@ def _real_gtin(value: Any) -> str | None:
     """Return the value if it is a real GTIN, not a scale or store-internal code.
 
     @param value: raw barcode
-    @returns the digits, or None for scale codes, restricted-circulation and malformed values
+    @returns the digits, or None for scale, restricted-circulation or malformed codes
     """
     digits = str(value or "").strip()
     if not digits.isdigit():
@@ -361,25 +374,46 @@ class WoolworthsClient:
     async def _ensure_signed_in(self, client: httpx.AsyncClient) -> None:
         """Raise CookieExpiredError unless `Me` answers with a Customer.
 
+        Transport errors propagate as-is: a network blip is not a dead session.
+
         @param client: open client
         """
         try:
             data = await _gql(client, "Me", _ME)
-        except (GraphQLError, httpx.HTTPError) as err:
-            raise CookieExpiredError(f"Woolworths session not signed in: {err}") from err
+        except GraphQLError as err:
+            raise CookieExpiredError(
+                f"Woolworths session not signed in: {err}"
+            ) from err
         if (data.get("me") or {}).get("__typename") != "Customer":
             raise CookieExpiredError("Woolworths session not signed in")
 
-    async def _detail(self, client: httpx.AsyncClient, product_id: str) -> dict[str, Any] | None:
+    async def _detail(
+        self, client: httpx.AsyncClient, product_id: str
+    ) -> dict[str, Any] | None:
         """Fetch and parse one product's detail.
 
         @param client: open client
         @param product_id: bare SKU
         @returns parsed detail, or None when Woolworths has no such product
         """
-        data = await _gql(client, "GetProductDetails", _DETAIL, {"key": str(product_id)})
+        data = await _gql(
+            client, "GetProductDetails", _DETAIL, {"key": str(product_id)}
+        )
         raw = (data.get("My") or {}).get("product")
         return _parse_detail(raw) if isinstance(raw, dict) else None
+
+    async def _price(
+        self, client: httpx.AsyncClient, product_id: str
+    ) -> dict[str, Any] | None:
+        """Fetch and parse one product's price row, without the detail-only fields.
+
+        @param client: open client
+        @param product_id: bare SKU
+        @returns parsed product, or None when Woolworths has no such product
+        """
+        data = await _gql(client, "GetProductDetails", _PRICE, {"key": str(product_id)})
+        raw = (data.get("My") or {}).get("product")
+        return _parse_product(raw) if isinstance(raw, dict) else None
 
     async def check_authed(self) -> None:
         """Raise CookieExpiredError unless the jar is a signed-in session."""
@@ -395,7 +429,10 @@ class WoolworthsClient:
         async with self._client() as client:
             data = await _gql(client, "ProductSearch", _SEARCH, {
                 "searchInput": {"byKeyword": {
-                    "value": query, "sortBy": "RELEVANCE", "pageIndex": 0, "pageSize": 24,
+                    "value": query,
+                    "sortBy": "RELEVANCE",
+                    "pageIndex": 0,
+                    "pageSize": 24,
                 }},
             })
         return [_parse_product(r) for r in _search_rows(data)]
@@ -431,7 +468,7 @@ class WoolworthsClient:
                 for _attempt in range(2):
                     try:
                         async with sem:
-                            detail = await self._detail(client, pid)
+                            detail = await self._price(client, pid)
                     except CookieExpiredError:
                         raise
                     except Exception as err:  # noqa: BLE001 - logged below
@@ -441,7 +478,9 @@ class WoolworthsClient:
                         results[pid] = detail
                     return
                 _LOGGER.warning(
-                    "Woolworths price fetch failed for %s after retry: %r", pid, last_err
+                    "Woolworths price fetch failed for %s after retry: %r",
+                    pid,
+                    last_err,
                 )
 
             await asyncio.gather(*(_one(pid) for pid in dict.fromkeys(product_ids)))
@@ -494,7 +533,7 @@ class WoolworthsClient:
         """
         async with self._client() as client:
             await self._ensure_signed_in(client)
-            detail = await self._detail(client, product_id)
+            detail = await self._price(client, product_id)
             if detail is None:
                 raise GraphQLError(f"Woolworths has no product {product_id}")
             if detail["kg_only"]:
@@ -531,7 +570,9 @@ class WoolworthsClient:
                 })
                 orders = data.get("orders") or {}
                 results = orders.get("results") or []
-                order_numbers += [str(o["orderNumber"]) for o in results if o.get("orderNumber")]
+                order_numbers += [
+                    str(o["orderNumber"]) for o in results if o.get("orderNumber")
+                ]
                 page += 1
                 if not results or page >= (orders.get("totalPages") or 0):
                     break
@@ -555,7 +596,8 @@ class WoolworthsClient:
             for item in items:
                 sku = str(item.get("productKey") or "").strip()
                 if sku and sku not in best:
-                    best[sku] = {"sku": sku, "name": (item.get("product") or {}).get("name")}
+                    name = (item.get("product") or {}).get("name")
+                    best[sku] = {"sku": sku, "name": name}
         ranked = sorted(best.values(), key=lambda i: freq[i["sku"]], reverse=True)
         return ranked[:_MAX_HISTORY]
 
@@ -604,7 +646,11 @@ class WoolworthsClient:
             data = await _gql(client, "Propositions", _PROPOSITIONS, variables)
         props = (data.get("propositions") or {}).get("propositions") or []
         slots = [
-            {"displayName": p.get("name"), "startTime": p.get("startTime"), "available": True}
+            {
+                "displayName": p.get("name"),
+                "startTime": p.get("startTime"),
+                "available": True,
+            }
             for p in props
             if p.get("available")
             and (not self.store_id or str(p.get("method") or "").lower() == "pickup")
@@ -631,7 +677,8 @@ class WoolworthsClient:
         mode = (data.get("setCartShoppingMode") or {}).get("shoppingMode") or {}
         if str(mode.get("pickupLocationId")) != str(self.store_id):
             _LOGGER.warning(
-                "Woolworths kept pickup location %s instead of %s; prices may be from another store",
+                "Woolworths kept pickup location %s instead of %s; "
+                "prices may be from another store",
                 mode.get("pickupLocationId"), self.store_id,
             )
 

@@ -427,18 +427,25 @@
   "lon": 174.102988
  },
  {
-  "id": "38b074c4-0e5a-4bd5-b743-d30f28d94982",
-  "name": "New World Metro",
-  "address": "68- 70 Willis Street, Wellington Central, Wellington, 6011",
-  "lat": -41.287948,
-  "lon": 174.775268
- },
- {
   "id": "60928d93-06fa-4d8f-92a6-8c359e7e846d",
-  "name": "New World Metro Auckland",
+  "name": "New World Metro Queen St",
   "address": "125 Queen Street, Auckland Central, Auckland, 1010",
   "lat": -36.846405,
   "lon": 174.765935
+ },
+ {
+  "id": "1898a189-acf3-4320-8704-7a9cc6b3924d",
+  "name": "New World Metro Shore City",
+  "address": "52-56 Anzac Street, Takapuna, Auckland, 0622",
+  "lat": -36.78756,
+  "lon": 174.77005
+ },
+ {
+  "id": "38b074c4-0e5a-4bd5-b743-d30f28d94982",
+  "name": "New World Metro Willis St",
+  "address": "68- 70 Willis Street, Wellington Central, Wellington, 6011",
+  "lat": -41.287948,
+  "lon": 174.775268
  },
  {
   "id": "4ff026b8-a60d-4383-8f0c-6c85f5623afa",
@@ -528,8 +535,8 @@
   "id": "51ee2a79-4693-410c-9287-66940847736d",
   "name": "New World Newmarket",
   "address": "42 Nuffield Street, Newmarket, Auckland, 1023",
-  "lat": -36.8709201,
-  "lon": 174.778261
+  "lat": -36.872037,
+  "lon": 174.777922
  },
  {
   "id": "ff680fec-3a34-4666-99ed-ab1a9d1c6ba0",
@@ -721,13 +728,6 @@
   "lon": 175.273985
  },
  {
-  "id": "1898a189-acf3-4320-8704-7a9cc6b3924d",
-  "name": "New World Shore City",
-  "address": "52-56 Anzac Street, Takapuna, Auckland, 0622",
-  "lat": -36.78756,
-  "lon": 174.77005
- },
- {
   "id": "692b45a2-2ab9-49de-adc3-e4a0ddd661a5",
   "name": "New World Silverstream",
   "address": "28 Whitemans Road, Silverstream, Upper Hutt, 5019",
@@ -750,7 +750,7 @@
  },
  {
   "id": "a0d86b5f-fdf4-44d1-b7a2-f418bdb37f4e",
-  "name": "New World Stanmore",
+  "name": "New World Stanmore (Christchurch)",
   "address": "288 Stanmore Road, Richmond, Christchurch, 8013",
   "lat": -43.5203,
   "lon": 172.6568
@@ -803,6 +803,13 @@
   "address": "37 Oxford Street, Tawa, Wellington, 5028",
   "lat": -41.169962,
   "lon": 174.82611
+ },
+ {
+  "id": "2d939bb7-ae26-4cc7-b930-d10e6a4de8a3",
+  "name": "New World Te Atatu",
+  "address": "575 Te Atatū Road, Te Atatū Peninsula, Auckland, 0610",
+  "lat": -36.842741,
+  "lon": 174.6518703
  },
  {
   "id": "5eb8d7a2-c5e4-4046-a17e-be2806626fd7",

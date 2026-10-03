@@ -15,10 +15,9 @@ from homeassistant.helpers.event import (
     async_track_time_change,
     async_track_time_interval,
 )
-from homeassistant.helpers.hassio import is_hassio
 from homeassistant.util import dt as dt_util
 
-from .addon import async_ensure_addon_running
+from .addon import addon_available, async_ensure_addon_running
 from .cart_builder import CartBuilder
 from .const import ALL_CHAINS, CONF_WOOLWORTHS_STORE_ID, DOMAIN
 from .coordinator import BasketBrainConfigEntry, BasketBrainCoordinator
@@ -116,7 +115,9 @@ def _load_woolworths_legacy_ids() -> dict[str, str]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-async def async_migrate_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry) -> bool:
+async def async_migrate_entry(
+    hass: HomeAssistant, entry: BasketBrainConfigEntry
+) -> bool:
     """Migrate config entries to the current version.
 
     @param hass: Home Assistant
@@ -131,7 +132,9 @@ async def async_migrate_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry
         if str(old_id) in legacy:
             data[CONF_WOOLWORTHS_STORE_ID] = legacy[str(old_id)]
             _LOGGER.info(
-                "Woolworths store id %s migrated to %s", old_id, data[CONF_WOOLWORTHS_STORE_ID]
+                "Woolworths store id %s migrated to %s",
+                old_id,
+                data[CONF_WOOLWORTHS_STORE_ID],
             )
     hass.config_entries.async_update_entry(entry, data=data, version=1, minor_version=3)
     return True
@@ -139,7 +142,7 @@ async def async_migrate_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry
 
 async def async_setup_entry(hass: HomeAssistant, entry: BasketBrainConfigEntry) -> bool:
     """Set up Basket Brain from a config entry."""
-    if not is_hassio(hass):
+    if not addon_available(hass):
         raise ConfigEntryError(
             "Basket Brain needs the Basket Brain Login add-on, which requires "
             "Home Assistant OS or Supervised. Container/Core installs are not "

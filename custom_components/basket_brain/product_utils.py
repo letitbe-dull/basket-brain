@@ -24,7 +24,9 @@ _SIZE_RE = re.compile(
 _EACH_RE = re.compile(r"\beach\b|\bea\b", re.IGNORECASE)
 
 # Woolworths selling rules on loose produce ("Min Order 250g"), not pack sizes.
-_MIN_ORDER_RE = re.compile(r"\bmin(?:imum)?\.?\s+order\s+\d+(?:\.\d+)?\s*(?:g|kg)\b", re.IGNORECASE)
+_MIN_ORDER_RE = re.compile(
+    r"\bmin(?:imum)?\.?\s+order\s+\d+(?:\.\d+)?\s*(?:g|kg)\b", re.IGNORECASE
+)
 
 
 def parse_size(text: str) -> tuple[float, str] | None:

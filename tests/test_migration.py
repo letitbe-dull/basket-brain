@@ -1,4 +1,4 @@
-"""Config entry 1.2 → 1.3: Woolworths store ids move from REST addressIds to GraphQL location ids."""
+"""Config entry 1.2 → 1.3: Woolworths REST store ids become GraphQL location ids."""
 
 import pytest
 from homeassistant.core import HomeAssistant
@@ -16,9 +16,14 @@ from custom_components.basket_brain.const import CONF_WOOLWORTHS_STORE_ID, DOMAI
         ("1906035", "1906035"),  # Quay Street: no current location, left for a re-pick
     ],
 )
-async def test_woolworths_store_id_migrates(hass: HomeAssistant, old_id: str, new_id: str) -> None:
+async def test_woolworths_store_id_migrates(
+    hass: HomeAssistant, old_id: str, new_id: str
+) -> None:
     entry = MockConfigEntry(
-        domain=DOMAIN, version=1, minor_version=2, data={CONF_WOOLWORTHS_STORE_ID: old_id}
+        domain=DOMAIN,
+        version=1,
+        minor_version=2,
+        data={CONF_WOOLWORTHS_STORE_ID: old_id},
     )
     entry.add_to_hass(hass)
 

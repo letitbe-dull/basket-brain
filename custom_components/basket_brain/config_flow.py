@@ -11,9 +11,8 @@ from homeassistant.components.hassio import AddonError
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 from homeassistant.helpers import selector
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.helpers.hassio import is_hassio
 
-from .addon import async_ensure_addon_running
+from .addon import addon_available, async_ensure_addon_running
 from .const import (
     ALL_CHAINS,
     CHAIN_PAKNSAVE,
@@ -97,7 +96,7 @@ class BasketBrainConfigFlow(ConfigFlow, domain=DOMAIN):
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         """Select which chains to enable."""
-        if not is_hassio(self.hass):
+        if not addon_available(self.hass):
             return self.async_abort(reason="no_supervisor")
 
         if user_input is not None:

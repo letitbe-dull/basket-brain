@@ -1,4 +1,4 @@
-"""Add-on Woolworths login: the `Me` signed-in confirmation and its use in the login flow."""
+"""Add-on Woolworths login: the `Me` sign-in check and the login flow."""
 
 import importlib
 import json
@@ -21,7 +21,7 @@ def _fixture(name: str) -> dict[str, Any]:
 
 
 class FakePage:
-    """Page stand-in: every browser call is a no-op, evaluate returns a canned `Me` answer."""
+    """Fake page: browser calls do nothing; evaluate returns a canned `Me` answer."""
 
     def __init__(self, me: Any) -> None:
         self._me = me
@@ -44,7 +44,14 @@ class FakePage:
     [
         (_fixture("me-signed-in.json"), True),
         (_fixture("me-no-cookies.json"), False),
-        ({"errors": [{"message": "no", "extensions": {"code": "BANNED_OPERATION"}}]}, False),
+        (
+            {
+                "errors": [
+                    {"message": "no", "extensions": {"code": "BANNED_OPERATION"}}
+                ]
+            },
+            False,
+        ),
         ({"data": None}, False),
         ({"data": {"me": {"__typename": "Guest"}}}, False),
         (None, False),
@@ -75,13 +82,19 @@ def login_module(monkeypatch: pytest.MonkeyPatch) -> types.ModuleType:
     return importlib.import_module("login_woolworths")
 
 
-async def test_login_that_ends_as_guest_is_transient(login_module: types.ModuleType) -> None:
+async def test_login_that_ends_as_guest_is_transient(
+    login_module: types.ModuleType,
+) -> None:
+    page = FakePage(_fixture("me-no-cookies.json"))
     with pytest.raises(login_module.TransientLoginError):
-        await login_module._perform_login(FakePage(_fixture("me-no-cookies.json")), "a@b.c", "pw")
+        await login_module._perform_login(page, "a@b.c", "pw")
 
 
-async def test_login_that_ends_as_customer_succeeds(login_module: types.ModuleType) -> None:
-    await login_module._perform_login(FakePage(_fixture("me-signed-in.json")), "a@b.c", "pw")
+async def test_login_that_ends_as_customer_succeeds(
+    login_module: types.ModuleType,
+) -> None:
+    page = FakePage(_fixture("me-signed-in.json"))
+    await login_module._perform_login(page, "a@b.c", "pw")
 
 
 def test_no_success_decision_reads_xsrf() -> None:
